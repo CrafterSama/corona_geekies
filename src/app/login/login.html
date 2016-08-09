@@ -1,0 +1,28 @@
+<div class="container">
+  <div style="height: 150px;"></div>
+  <!-- FORM -->
+  <!-- pass in the variable if our form is valid or invalid -->
+  <h1>Login</h1>
+  <form name="userForm" novalidate>
+
+    <!-- USERNAME -->
+    <div class="form-group" ng-class="{ 'has-error' : (userForm.username.$invalid || register.server.username) && login.submitted}">
+      <label>Apodo/Alias</label>
+      <input type="text" name="username" class="form-control" placeholder="Apodo/Alias" ng-model="login.user.username" required>
+      <p ng-show="userForm.username.$invalid && login.submitted" class="help-block">Apodo/Alias es Requerido.</p>
+      <p ng-show="userForm.username.$error.minlength" class="help-block">Minimo 3 Caracteres.</p>
+      <p ng-show="userForm.username.$error.maxlength" class="help-block">Maximo 20 Caracteres.</p>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group" ng-class="{ 'has-error' : (userForm.password.$invalid || register.server.password) && login.submitted}">
+      <label>Password</label>
+      <input type="password" name="password" class="form-control" placeholder="Password" ng-model="login.user.password" required>
+      <p ng-show="userForm.password.$invalid && login.submitted" class="help-block">Password es Requerido.</p>
+    </div>
+
+    <button type="button" class="btn btn-primary" data-ng-click="login.submitForm(userForm)">Submit</button>
+
+  </form>
+
+</div>

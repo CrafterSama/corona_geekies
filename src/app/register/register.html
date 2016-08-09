@@ -1,0 +1,111 @@
+<div class="container">
+
+  <!-- FORM -->
+  <!-- pass in the variable if our form is valid or invalid -->
+  <form name="userForm" novalidate>
+    <div style="height: 100px;"></div>
+    <h1>Register</h1>
+    <!-- Firstname -->
+    <div class="col-lg-12 col-md-12 col-xs-12">
+      <div class="col-lg-4 col-md-4 col-xs-4">
+        <div class="form-group" ng-class="{ 'has-error' : (userForm.firstname.$invalid || register.server.first_name) && register.submitted}">
+          <label>Nombre</label>
+          <input type="text" name="firstname" class="form-control" placeholder="Nombre" ng-model="register.user.firstname" ng-minlength="3" ng-maxlength="20" required>
+          <p ng-show="userForm.firstname.$invalid && register.submitted" class="help-block">Nombre es Requerido.</p>
+          <p ng-show="userForm.firstname.$error.minlength" class="help-block">Minimo 3 Caracteres.</p>
+          <p ng-show="userForm.firstname.$error.maxlength" class="help-block">Maximo 20 Caracteres.</p>
+          <p class="help-block error-message"
+             data-ng-show="register.server.first_name"
+             ng-repeat="error in register.server.first_name"> {{error}} </p>
+        </div>
+      </div>
+
+      <!-- Lastname -->
+      <div class="col-lg-4 col-md-4 col-xs-4">
+        <div class="form-group" ng-class="{ 'has-error' : (userForm.password.$invalid || register.server.last_name) && register.submitted }">
+          <label>Apellido</label>
+          <input type="text" name="lastname" class="form-control" ng-model="register.user.lastname" placeholder="Apellido" required>
+          <p ng-show="userForm.lastname.$invalid && register.submitted" class="help-block">Apellido es Requerido.</p>
+          <p class="help-block error-message"
+             data-ng-show="register.server.last_name"
+             ng-repeat="error in register.server.last_name"> {{error}} </p>
+        </div>
+      </div>
+
+      <!-- Telefono -->
+      <div class="col-lg-4 col-md-4 col-xs-4">
+        <div class="form-group" ng-class="{ 'has-error' : (userForm.phone_cel.$invalid || register.server.phone_cel) && register.submitted }">
+          <label>Teléfono Celular</label>
+          <input type="text" name="phone_cel" class="form-control" ng-model="register.user.phone_cel" placeholder="Teléfono Celular" required>
+          <p ng-show="userForm.phone_cel.$invalid && register.submitted" class="help-block">Teléfono Celular es Requerido.</p>
+          <p class="help-block error-message"
+             data-ng-show="register.server.phone_cel"
+             ng-repeat="error in register.server.phone_cel"> {{error}} </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-xs-12">
+      <!-- Email -->
+      <div class="col-lg-4 col-md-4 col-xs-4">
+        <div class="form-group" ng-class="{ 'has-error' : (userForm.email.$invalid || register.server.email) && register.submitted}">
+          <label>Correo Electrónico</label>
+          <input type="email" name="email" class="form-control" ng-model="register.user.email" placeholder="Correo Electrónico" required>
+          <p ng-show="userForm.email.$invalid && register.submitted" class="help-block">Correo electrónico es Requerido.</p>
+          <p class="help-block error-message"
+             data-ng-show="register.server.email"
+             ng-repeat="error in register.server.email"> {{error}} </p>
+        </div>
+      </div>
+
+      <!-- Apodo/Alia -->
+      <div class="col-lg-4 col-md-4 col-xs-4">
+        <div class="form-group" ng-class="{ 'has-error' : (userForm.alias.$invalid || register.server.username) && register.submitted}">
+          <label>Apodo/Alias</label>
+          <input type="text" name="alias" class="form-control" placeholder="Apodo/Alias" ng-model="register.user.alias" required>
+          <p ng-show="userForm.alias.$invalid && register.submitted" class="help-block">Apodo/Alias es Requerido.</p>
+          <p class="help-block error-message"
+             data-ng-show="register.server.username"
+             ng-repeat="error in register.server.username"> {{error}} </p>
+        </div>
+      </div>
+
+      <!-- Fecha de Nacimiento -->
+      <div class="col-lg-4 col-md-4 col-xs-4">
+        <div class="form-group" ng-class="{ 'has-error' : (userForm.birthday.$invalid || register.server.birhtdate)  && register.submitted  }">
+          <label>Fecha de Nacimiento</label>
+          <input type="text" name="birthday" class="form-control" ng-model="register.user.birthday" mask='9999-12-31' placeholder="Ej: 1981-12-31" required>
+          <p ng-show="userForm.birthday.$invalid && register.submitted" class="help-block">Fecha de Nacimiento es Requerido.</p>
+          <p class="help-block error-message"
+             data-ng-show="register.server.birhtdate"
+             ng-repeat="error in register.server.birhtdate"> {{error}} </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-xs-12">
+      <!-- Password -->
+      <div class="col-lg-4 col-md-4 col-xs-4">
+        <div class="form-group" ng-class="{ 'has-error' : (userForm.password.$invalid || register.server.password) && register.submitted }">
+          <label>Contraseña</label>
+          <input type="password" name="password" class="form-control" placeholder="Contraseña" ng-model="register.user.password" required>
+          <p ng-show="userForm.password.$invalid && register.submitted" class="help-block">Password is Requerido.</p>
+          <p class="help-block error-message"
+             data-ng-show="register.server.password"
+             ng-repeat="error in register.server.password"> {{error}} </p>
+        </div>
+      </div>
+
+      <!-- Confirm-Password -->
+      <div class="col-lg-4 col-md-4 col-xs-4">
+        <div class="form-group" ng-class="{ 'has-error' : (userForm.confirm_password.$invalid) && register.submitted}">
+          <label>Confirmar Contraseña</label>
+          <input type="password" name="confirm_password" class="form-control" placeholder="Confirmar Contraseña" ng-model="register.user.confirm_password" required>
+          <p ng-show="userForm.confirm_password.$invalid && register.submitted" class="help-block">You name is required.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 text-right">
+        <button type="button" class="btn btn-primary" data-ng-click="register.submitForm(userForm)">Submit</button>
+    </div>
+  </form>
+
+</div>
