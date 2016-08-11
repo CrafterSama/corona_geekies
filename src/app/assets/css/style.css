@@ -90,6 +90,11 @@ h3.carousel-home-title {
 	margin: 0 auto;
 }
 
+.box-items > .row > .col-md-12.items > .col-md-4 {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
 .carousel-indicators {
 	z-index: 1005;
 }
@@ -535,6 +540,13 @@ h3.carousel-home-title {
 
 	.btn-group .btn-warning {
 		    padding: 10px 120px;
+	}
+}
+
+@media (min-width: 499px) and (max-width: 801px) {
+	.box-items > .row > .col-md-12.items > .col-md-4 {
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }
 
