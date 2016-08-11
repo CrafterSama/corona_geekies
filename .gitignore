@@ -5,4 +5,4 @@ coverage/
 .idea/
 .tmp/
 dist/
-src/app/index.config.js:
+src/app/index.config.js
