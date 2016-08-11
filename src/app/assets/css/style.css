@@ -116,7 +116,7 @@ h3.carousel-home-title {
 }
 
 .carousel-control.right, .carousel-control.left {
-	background-image:none;
+	/*background-image:none;*/
 }
 
 .container-full.profile-section {
@@ -387,6 +387,68 @@ h3.carousel-home-title {
     font-size: 18px;
     line-height: 20px;
 }
+
+.scores-carousel {
+    position: relative;
+}
+
+
+.scores-carousel-inner {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.scores-carousel-inner>.item.active, .scores-carousel-inner>.item.next.left, .scores-carousel-inner>.item.prev.right {
+    left: 0;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.scores-carousel-inner > .item {
+    display: none;
+    position: relative;
+    -webkit-transition: 0.6s ease-in-out left;
+    -moz-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left;
+}
+
+.scores-carousel-inner>.active, .scores-carousel-inner>.next, .scores-carousel-inner>.prev {
+    display: block;
+}
+
+.scores-carousel-control {
+    position: absolute;
+    top: 40%;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    font-size: 20px;
+    color: #fcb724;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,0);
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+.scores-carousel-control.right {
+    right: 0;
+    left: auto;
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+    background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)));
+    background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    background-repeat: repeat-x;
+}
+
+.scores-carousel-control.right, .scores-carousel-control.left {
+    background-image: none;
+}
+
+
 
 .scores-header {
 	background-color: #FCB724;
