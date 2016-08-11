@@ -22,6 +22,7 @@
                     <li><a href="#">Beneficio del Club</a></li>
                     <li><a href="#">El Club Social</a></li>
                     <li><a href="#">El Super Fan</a></li>
+                    <li><a href="#" ng-click="main.salir()">Salir</a></li>
                     <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/face-s.svg" alt="" /></a></li>
                     <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/google-s.svg" alt="" /></a></li>
                     <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/insta-s.svg" alt="" /></a></li>
@@ -467,7 +468,7 @@
                             <div class="panel-body">
                                 <div class="col-md-6 col-sm-6">
                                     <label for="profile-name">Nombre</label>
-                                    <div class="profile-name">José</div>
+                                    <div class="profile-name">{{main.user.first_name}}</div>
                                     <label for="profile-city">Ciudad</label>
                                     <div class="profile-city">Torreón</div>
                                     <label for="profile-social-buttons">Referir Contactos</label>
@@ -480,7 +481,7 @@
                                 </div>
                                 <div class="col-md-6 col-sm-6">
                                     <label for="profile-lastname">Apellido</label>
-                                    <div class="profile-lastname">Gomez</div>
+                                    <div class="profile-lastname">{{main.user.last_name}}</div>
                                     <label for="profile-crowns">Mis Coronas</label>
                                     <div class="profile-crowns">
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">

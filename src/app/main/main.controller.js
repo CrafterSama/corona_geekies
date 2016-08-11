@@ -15,7 +15,7 @@
 
     $http({
       method: 'GET',
-      url: 'http://corona.hobox.org/accounts/',
+      url: 'http://dev.corona.geekies.co:8000/accounts/',
     }).then(function successCallback(response) {
       vm.user = response.data;
       $log.info(response);
@@ -26,6 +26,13 @@
       // or server returns response with an error status.
       $log.info(response);
     });
+
+
+    vm.salir = function(){
+
+      $auth.logout();
+      $state.go('home');
+    }
 
   }
 })();
