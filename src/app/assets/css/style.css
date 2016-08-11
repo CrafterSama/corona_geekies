@@ -3,7 +3,7 @@ body {
     font-size: 16px;
     line-height: 1.42857143;
     color: #333;
-    background-color: rgba(19,19,19,1);
+    background-color: rgba(33,31,32,1);
 }
 
 h1.carousel-home-title {
@@ -90,6 +90,10 @@ h3.carousel-home-title {
 	margin: 0 auto;
 }
 
+.carousel-indicators {
+	z-index: 1005;
+}
+
 .carousel-indicators li {
     width: 18px;
     height: 18px;
@@ -99,6 +103,16 @@ h3.carousel-home-title {
 .carousel-indicators .active {
     width: 20px;
     height: 20px;
+}
+
+.carousel-control.right, .carousel-control.left {
+	background-image:none;
+}
+
+.container-full.profile-section {
+	padding: 50px 0;
+	background-color: rgba(33,31,32,1);
+	position: relative;
 }
 
 .content-inner {
@@ -128,48 +142,6 @@ h3.carousel-home-title {
 	display: none;
 }
 
-.overlay-slider {
-	background: rgba(102,102,102,0.1);
-    background: -moz-linear-gradient(top, rgba(3,3,3,0.5) 0%, rgba(3,3,3,1) 20%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(3,3,3,0.5)), color-stop(20%, rgba(3,3,3,1)));
-    background: -webkit-linear-gradient(top, rgba(3,3,3,0.5) 0%, rgba(3,3,3,1) 20%);
-    background: -o-linear-gradient(top, rgba(3,3,3,0.5) 0%, rgba(3,3,3,1) 20%);
-    background: -ms-linear-gradient(top, rgba(3,3,3,0.5) 0%, rgba(3,3,3,1) 20%);
-    background: linear-gradient(to bottom, rgba(3,3,3,0.5) 0%, rgba(3,3,3,1) 20%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#131313', GradientType=0 );
-	color: rgb(255,255,255);
-	height: 100%;
-	position: relative;
-	padding-top: 0px;
-	z-index: 1003;
-}
-
-.overlay-promo {
-	background: rgba(102,102,102,0.1);
-    background: -moz-linear-gradient(top, rgba(33,31,32,0.1) 0%, rgba(33,31,32,0.2) 50%, rgba(33,31,32,1) 75%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(33,31,32,0.1)), color-stop(50%, rgba(33,31,32,0.5)), color-stop(75%, rgba(33,31,32,1)));
-    background: -webkit-linear-gradient(top, rgba(33,31,32,0.1) 0%, rgba(33,31,32,0.2) 50%, rgba(33,31,32,1) 75%);
-    background: -o-linear-gradient(top, rgba(33,31,32,0.1) 0%, rgba(33,31,32,0.2) 50%, rgba(33,31,32,1) 75%);
-    background: -ms-linear-gradient(top, rgba(33,31,32,0.1) 0%, rgba(33,31,32,0.2) 50%, rgba(33,31,32,1) 75%);
-    background: linear-gradient(to bottom, rgba(33,31,32,0.1) 0%, rgba(33,31,32,0.2) 50%, rgba(33,31,32,1) 75%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#131313', GradientType=0 );
-	color: rgb(255,255,255);
-	height: 100%;
-	position: relative;
-	padding-top: 190px;
-	z-index: 1003;
-}
-
-.overlay-promo h1.promo-home-title, 
-.overlay-promo h3.promo-home-title,
-.overlay-promo h1.profile-home-title {
-	text-align: center;
-}
-
-.overlay-promo h1.profile-home-title {
-	font-size: 4.2em;
-}
-
 .login-form {
 	background-color: #fcb724;
 	display: block;
@@ -179,30 +151,16 @@ h3.carousel-home-title {
 	padding-top: 15px;
 }
 
-.profile-image {
-	margin-top: 50px;
-}
-
-.profile-section {
-	margin-top: 150px;
-}
-
-.promo-image {
-	background-image: url(../images/santos-team-large.jpg);
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	-webkit-background-size: cover;
-  	background-position: top center;
-  	background-repeat: no-repeat;
-  	background-size: cover;
-  	margin: 0;
-}
-
 .login-form label {
 	text-align: left;
-	text-transform:  uppercase;	
+	text-transform:  uppercase;
 	font-weight: normal;
 }
+
+.nav {
+	padding-left: 10px;
+}
+
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fcb724;
 }
@@ -243,14 +201,143 @@ h3.carousel-home-title {
 }
 
 .navbar-toggle {
-    margin: 65px 0 8px -30px;
-    padding: 9px 10px;
+    margin: 40px 20px 8px -30px;
+    padding: 18px 20px;
     border: none;
 }
 
-.navbar-toggle:hover {
-	background-colo: rgba(255,255,255,0.0);
+.navbar-default .navbar-toggle:hover {
+    background-color: rgba(252,183,36,1);
 }
+.navbar-default .navbar-toggle:hover .icon-bar {
+    background-color: #008066;
+}
+
+.overlay-slider {
+	background: rgba(102,102,102,0.1);
+	background: -moz-linear-gradient(top, rgba(33,31,32,0.1) 0%, rgba(33,31,32,1) 60%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(33,31,32,0.1)), color-stop(60%, rgba(33,31,32,1)));
+    background: -webkit-linear-gradient(top, rgba(33,31,32,0.1) 0%, rgba(33,31,32,1) 60%);
+    background: -o-linear-gradient(top, rgba(33,31,32,0.1) 0%, rgba(33,31,32,1) 60%);
+    background: -ms-linear-gradient(top, rgba(33,31,32,0.1) 0%, rgba(33,31,32,1) 60%);
+    background: linear-gradient(to bottom, rgba(33,31,32,0.1) 0%, rgba(33,31,32,1) 60%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#131313', GradientType=0 );
+	color: rgb(255,255,255);
+	/*height: 100%;*/
+	width: 100%;
+	position: absolute;
+	top: 10px;
+    right: 0%;
+	bottom: 0px;
+    left: 0%;
+    z-index: 10;
+    padding-top: 120px;
+    padding-bottom: 80px;
+	z-index: 1003;
+}
+
+.overlay-promo {
+	background: rgba(102,102,102,0.1);
+    background: -moz-linear-gradient(top, rgba(33,31,32,0.1) 0%, rgba(33,31,32,0.2) 25%, rgba(33,31,32,1) 90%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(33,31,32,0.1)), color-stop(25%, rgba(33,31,32,0.5)), color-stop(90%, rgba(33,31,32,1)));
+    background: -webkit-linear-gradient(top, rgba(33,31,32,0.1) 0%, rgba(33,31,32,0.2) 25%, rgba(33,31,32,1) 90%);
+    background: -o-linear-gradient(top, rgba(33,31,32,0.1) 0%, rgba(33,31,32,0.2) 25%, rgba(33,31,32,1) 90%);
+    background: -ms-linear-gradient(top, rgba(33,31,32,0.1) 0%, rgba(33,31,32,0.2) 25%, rgba(33,31,32,1) 90%);
+    background: linear-gradient(to bottom, rgba(33,31,32,0.1) 0%, rgba(33,31,32,0.2) 25%, rgba(33,31,32,1) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#131313', GradientType=0 );
+	color: rgb(255,255,255);
+	height: 100%;
+	position: relative;
+	padding-top: 180px;
+	padding-bottom: 50px;
+	z-index: 1003;
+}
+
+.overlay-promo h1.promo-home-title,
+.overlay-promo h3.promo-home-title,
+.overlay-promo h1.profile-home-title {
+	text-align: center;
+}
+
+.overlay-promo h1.profile-home-title {
+	font-size: 4.2em;
+	margin: 35px;
+}
+
+.panel {
+	border-radius: 0px;
+	border: none ;
+	background: transparent;
+}
+
+.panel-heading {
+    border-bottom: 1px solid #fcb724;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: #fcb724;
+    color: #008066;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.panel-heading > .btn.btn-success.pull-right {
+    position: relative;
+    top: -10px;
+    right: -15px;
+    padding: 11px 15px 10px 15px;
+    font-weight: 700;
+}
+
+.panel-body {
+	background: transparent;
+	color: #636363;
+	font-size: 1.1em;
+}
+
+
+.profile-name,
+.profile-lastname,
+.profile-city {
+	color: #fcb724;
+	font-size: 2em;
+}
+
+.profile .profile-image {
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+.profile-social-buttons img {
+	width: 25px;
+}
+
+.progress {
+    height: 30px;
+    background-color: #636363;
+    border-radius: 0;
+}
+
+.progress-bar {
+    font-size: 1em;
+    line-height: 30px;
+    color: #008066;
+}
+
+
+.profile-image {
+	margin-top: 50px;
+}
+
+.promo-image {
+	background-image: url(../images/santos-team-large.jpg);
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	-webkit-background-size: cover;
+  	background-position: top center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	margin: 0;
+}
+
 
 .register-form {
 	background-color: #008066;
@@ -263,7 +350,7 @@ h3.carousel-home-title {
 
 .register-form label {
 	text-align: left;
-	text-transform:  uppercase;		
+	text-transform:  uppercase;
 	font-weight: normal;
 }
 
@@ -312,7 +399,7 @@ h3.carousel-home-title {
 
 	-webkit-flex-flow: row wrap;
 	justify-content: space-around;
-	
+
 	align-items: center;
   	justify-content: center;
 
@@ -332,9 +419,9 @@ h3.carousel-home-title {
 
 .score-box-item-1, .box-item-1 {
 	padding: 0px;
-	
+
 	flex: 1 auto;
-	
+
 	vertical-align: middle;
 	align-items: center;
 }
@@ -439,11 +526,21 @@ h3.carousel-home-title {
 
 	.btn-group .btn-warning {
 		    padding: 10px 70px;
-	}	
+	}
 }
 
-@media (min-width: 599px) and (max-width: 768px) {
+@media (min-width: 599px) and (max-width: 767px) {
 
+	.btn-group .btn-success {
+		padding: 10px 85px;
+	}
+
+	.btn-group .btn-warning {
+		padding: 10px 85px;
+	}
+}
+
+@media (width: 768px) {
 	.btn-group .btn-success {
 		padding: 10px 65px;
 	}
@@ -451,13 +548,6 @@ h3.carousel-home-title {
 	.btn-group .btn-warning {
 		padding: 10px 65px;
 	}
-	.overlay {
-	    padding-top: 390px;
-	}
-}
-
-@media (min-width: 768px) {
-
 }
 
 @media screen and (min-width: 768px) {
@@ -472,11 +562,11 @@ h3.carousel-home-title {
 
 @media (min-width: 322px) and (max-width: 600px) {
 	h1.carousel-home-title {
-		font-size: 1.9em;
+		font-size: 2.9em;
 	}
 
 	h3.carousel-home-title {
-		font-size: 1.6em;
+		font-size: 2.6em;
 	}
 
 	.btn-group .btn-success {
@@ -505,8 +595,13 @@ h3.carousel-home-title {
 	.btn-group .btn-warning {
 		padding: 10px 10px;
 	}
-	.overlay {
-	    padding-top: 190px;
+
+	.carousel-inner {
+		min-height: 420px;
+	}
+
+	.overlay-slider {
+	    top: 230px;
 	}
 	.box-item-1 img,
 	.box-item-2 img,
