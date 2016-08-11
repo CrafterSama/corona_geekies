@@ -6,7 +6,7 @@
     .config(routerConfig);
 
   /** @ngInject */
-  function routerConfig($stateProvider, $urlRouterProvider) {
+  function routerConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 
     function loginRequired($q, $location, $auth) {
       var deferred = $q.defer();
@@ -52,6 +52,7 @@
       });
 
     $urlRouterProvider.otherwise('/home');
+
   }
 
 })();

@@ -10,8 +10,8 @@
           <span class="icon-bar"></span>
         </button>
         <ul class="nav navbar-nav">
-          <li class="navbar-brand"><a href="#"><img src="assets/images/logo-santos.png" alt=""></a></li>
-          <li class="navbar-brand second-brand"><a class="brand-border-left" href="#"><img src="assets/images/logo-corona.png" alt=""></a></li>
+          <li class="navbar-brand"><a href="#/home"><img src="assets/images/logo-santos.png" alt=""></a></li>
+          <li class="navbar-brand second-brand"><a class="brand-border-left" href="#/home"><img src="assets/images/logo-corona.png" alt=""></a></li>
         </ul>
       </div>
 
@@ -37,7 +37,7 @@
       <h1 class="promo-home-title">Club Santos Corona</h1>
       <div class="row action-buttons">
         <div class="btn-group justified sign-buttons" role="group" aria-label="...">
-          <a type="button" href="register.html" id="show-register" class="btn btn-success">Registro</a>
+          <a type="button" href="#/register" id="show-register" class="btn btn-success">Registro</a>
           <span class="btn diagonal-success"></span>
           <a type="button" href="#/login" id="show-login" class="btn btn-warning">Ingreso</a>
         </div>
@@ -94,7 +94,7 @@
               </div>
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.birthday.$invalid || register.server.birhtdate)  && register.submitted  }">
                 <label for="birthday">Fecha de Nacimiento *</label>
-                <input type="text" name="birthday" class="form-control" ng-model="register.user.birthday" mask='9999-99-99' placeholder="Ej: 1981-12-31" required>
+                <input type="text" name="birthday" class="form-control" ng-model="register.user.birthday" mask='99-99-9999' placeholder="Ej: 31-12-1981" required>
                 <p ng-show="userForm.birthday.$invalid && register.submitted" class="help-block">* Requerido.</p>
                 <p class="help-block error-message"
                    data-ng-show="register.server.birhtdate"
