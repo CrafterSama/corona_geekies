@@ -701,13 +701,23 @@ h3.carousel-home-title {
 	}
 }
 
-@media (min-width: 322px) and (max-width: 478px) {
+@media (min-width: 377px) and (max-width: 478px) {
 	.btn-group .btn-success {
-		padding: 10px 45px;
+		padding: 10px 40px;
 	}
 
 	.btn-group .btn-warning {
-		padding: 10px 45px;
+		padding: 10px 40px;
+	}
+}
+
+@media (min-width: 322px) and (max-width: 401px) {
+	.btn-group .btn-success {
+		padding: 10px 30px;
+	}
+
+	.btn-group .btn-warning {
+		padding: 10px 30px;
 	}
 }
 
