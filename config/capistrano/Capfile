@@ -1,0 +1,8 @@
+require 'capistrano/setup'
+
+require 'capistrano/deploy'
+
+Dir.glob('config/tasks/*.rake').each { |r| import r }
+
+set :rvm_type, :user
+set :rvm_ruby_version, '2.0.0-p451'
