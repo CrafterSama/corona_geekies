@@ -45,7 +45,7 @@
           <form class="row register-form col-md-12" name="userForm" novalidate>
             <div class="col-md-2">
               <div class="profile-image text-center col-md-12">
-                <img role="button" id="profile-image" src="assets/images/profile-image.jpg" width="" alt="">
+                <img role="button" id="profile-image center-block" src="assets/images/profile-image.jpg" width="" alt="">
                 <input class="hide" type="file" />
               </div>
             </div>
@@ -61,7 +61,7 @@
                    ng-repeat="error in register.server.first_name"> {{error}} </p>
               </div>
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.password.$invalid || register.server.last_name) && register.submitted }">
-                <label for="lastname">Apellido</label>
+                <label for="lastname">Apellido *</label>
                 <input type="text" name="lastname" class="form-control" ng-model="register.user.lastname" placeholder="Apellido" required>
                 <p ng-show="userForm.lastname.$invalid && register.submitted" class="help-block">* Requerido.</p>
                 <p class="help-block error-message"
@@ -77,7 +77,7 @@
                    ng-repeat="error in register.server.phone_cel"> {{error}} </p>
               </div>
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.email.$invalid || register.server.email) && register.submitted}">
-                <label for="email">Correo Electronico</label>
+                <label for="email">Correo Electronico *</label>
                 <input type="email" name="email" class="form-control" ng-model="register.user.email" placeholder="Correo Electrónico" required>
                 <p ng-show="userForm.email.$invalid && register.submitted" class="help-block">* Requerido.</p>
                 <p class="help-block error-message"
@@ -115,10 +115,11 @@
               </div>
               <div class="radio col-md-12">
                 <label>
-                  <input type="radio" name="accept"> Acepto los Terminos
+                  <input type="radio" name="accept"> Acepto los Terminos y Condiciones
                 </label>
               </div>
-              <div class="form-group col-md-12">
+              <div class="form-group col-md-12 text-center">
+                  <span>Datos Obligatorios (*)</span>
                 <button type="button" class="btn btn-warning btn-block" data-ng-click="register.submitForm(userForm)">Registrar</button>
               </div>
             </div>
