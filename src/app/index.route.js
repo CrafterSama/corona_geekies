@@ -23,14 +23,14 @@
 
 
     $stateProvider
-      .state('home', {
-        url: '/home',
+      .state('main', {
+        url: '/main',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
-        controllerAs: 'main',
+        controllerAs: 'main'/*,
         resolve: {
           loginRequired: loginRequired
-        }
+        }*/
       })
       .state('login', {
         url: '/login',
@@ -43,9 +43,15 @@
         templateUrl: 'app/register/register.html',
         controller: 'RegisterController',
         controllerAs: 'register'
+      })
+      .state('home', {
+        url: '/home',
+        templateUrl: 'app/home/home.html',
+        controller: 'HomeController',
+        controllerAs: 'home'
       });
 
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/home');
   }
 
 })();

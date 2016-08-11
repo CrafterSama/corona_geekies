@@ -1,78 +1,66 @@
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="content-inner">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <ul class="nav navbar-nav">
-          <li class="navbar-brand"><a href="#"><img src="assets/images/logo-santos.png" alt=""></a></li>
-          <li class="navbar-brand second-brand"><a class="brand-border-left" href="#"><img src="assets/images/logo-corona.png" alt=""></a></li>
-        </ul>
-      </div>
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="row collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav navbar-header navbar-right">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Beneficio del Club</a></li>
-          <li><a href="#">El Club Social</a></li>
-          <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/face-s.svg" alt="" /></a></li>
-          <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/google-s.svg" alt="" /></a></li>
-          <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/insta-s.svg" alt="" /></a></li>
-          <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/twitter-s.svg" alt="" /></a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
+    <div class="content-inner">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="nav navbar-nav">
+                    <li class="navbar-brand"><a href="#/home"><img src="assets/images/logo-santos.png" alt=""></a></li>
+                    <li class="navbar-brand second-brand"><a class="brand-border-left" href="#/home"><img src="assets/images/logo-corona.png" alt=""></a></li>
+                </ul>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="row collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-header navbar-right">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Beneficio del Club</a></li>
+                    <li><a href="#">El Club Social</a></li>
+                    <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/face-s.svg" alt="" /></a></li>
+                    <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/google-s.svg" alt="" /></a></li>
+                    <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/insta-s.svg" alt="" /></a></li>
+                    <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/twitter-s.svg" alt="" /></a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
     </div>
-  </div>
 </div>
-<div class="row promo-image">
-  <div class="overlay-promo">
-    <div class="container">
-      <h3 class="promo-home-title">Registrate, Juega y Gana<br />premios en el</h3>
-      <h1 class="promo-home-title">Club Santos Corona</h1>
-      <div class="row action-buttons">
-        <div class="btn-group justified sign-buttons" role="group" aria-label="...">
-          <a type="button" href="#/register" id="show-register" class="btn btn-success">Registro</a>
-          <span class="btn diagonal-success"></span>
-          <a type="button" href="#/login" id="show-login" class="btn btn-warning">Ingreso</a>
+<div id="home-carousel" class="carousel slide" data-ride="carousel">
+    <div class="row-fluid carousel-inner">
+        <div class="item active">
+            <img class="hidden-sm hidden-md hidden-lg" alt="second slide" src="assets/images/santos-team-extra-small.jpg">
+            <img class="hidden-xs hidden-sm hidden-lg" alt="second slide" src="assets/images/santos-team.jpg">
+            <img class="hidden-xs hidden-md hidden-lg" alt="second slide" src="assets/images/santos-team-small.jpg">
+            <img class="hidden-xs hidden-sm hidden-md" alt="second slide" src="assets/images/santos-team-large.jpg">
+            <div class="overlay-slider">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3 class="carousel-home-title">Registrate, Juega y Gana<br />premios en el</h3>
+                        <h1 class="carousel-home-title">Club Santos Corona</h1>
+                        <div class="row action-buttons">
+                            <div class="btn-group justified sign-buttons" role="group" aria-label="...">
+                                <a type="button" href="#/register" id="show-register" class="btn btn-success">Registro</a>
+                                <span class="btn diagonal-success"></span>
+                                <a type="button" href="#/login" id="show-login" class="btn btn-warning">Ingreso</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#home-carousel" data-slide-to="0" class=""></li>
+                    <li data-target="#home-carousel" data-slide-to="1" class="active"></li>
+                    <li data-target="#home-carousel" data-slide-to="2" class=""></li>
+                </ol>
+            </div>
         </div>
-        <div class="login-form">
-          <form class="row login-form col-md-12" role="form" name="userForm" novalidate >
-            <div class="form-group col-md-6" data-ng-class="{ 'has-error' : (userForm.username.$invalid || register.server.username) && login.submitted}">
-              <label for="email">Alias/Correo Electronico *</label>
-              <input type="text" name="username" class="form-control" data-ng-model="login.user.username" placeholder="Alias/Correo Electronico" required />
-              <p data-ng-show="userForm.username.$invalid && login.submitted" class="help-block">* Alias/Correo Electronico.</p>
-              <p data-ng-show="userForm.username.$error.minlength" class="help-block">* Minimo 3 Caracteres.</p>
-              <p data-ng-show="userForm.username.$error.maxlength" class="help-block">* Maximo 20 Caracteres.</p>
-              <p class="help-block error-message"
-                 data-ng-show="login.server.username"
-                 ng-repeat="error in login.server.username"> {{error}} </p>
-            </div>
-            <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.password.$invalid || register.server.password) && login.submitted}">
-              <label for="password">Contraseña *</label>
-              <input type="password" name="password" class="form-control"  placeholder="Contraseña" ng-model="login.user.password" required />
-              <p ng-show="userForm.password.$invalid && login.submitted" class="help-block">* Contraseña es Requerido.</p>
-              <p class="help-block error-message"
-                 data-ng-show="login.server.password"
-                 ng-repeat="error in login.server.password">* {{error}} </p>
-            </div>
-            <div class="radio col-md-6">
-              <label>
-                <input type="radio" name="remember-data"> Recordar Datos
-              </label>
-            </div>
-            <div class="form-group col-md-6">
-              <button type="button" class="btn btn-success btn-block" data-ng-click="login.submitForm(userForm)">Ingresar</button>
-            </div>
-          </form>
-        </div>
-      </div>
     </div>
-  </div>
+    <a class="left carousel-control" href="#home-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#home-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 </div>
 <div class="container box-items">
     <div class="row">
@@ -91,7 +79,7 @@
                     <div class="text-center">FECHA 1</div>
                 </div>
             </div>
-            <div class="row scores-body-top">
+            <div class="scores-body-top">
                 <div class="score-box">
                     <div class="score-box-item-1 team-logo">
                         <img src="assets/images/logo-santos.png" width="" alt="">
@@ -102,8 +90,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row scores-body-bottom">
-                <div class="score-box">
+            <div class="scores-body-bottom">
+                <div class="score-box bottom">
                     <div class="score-box-item-1 team-logo">
                         <img src="assets/images/team-2.png" width="" alt="">
                     </div>
@@ -117,14 +105,14 @@
     </div>
 </div>
 <div class="hidden-xs hidden-sm scores-header">
-  <div class="row content-inner">
-    <div class="col-md-2 text-center">FECHA 1</div>
-    <div class="col-md-2 text-center">FECHA 2</div>
-    <div class="col-md-2 text-center">FECHA 3</div>
-    <div class="col-md-2 text-center">FECHA 4</div>
-    <div class="col-md-2 text-center">FECHA 5</div>
-    <div class="col-md-2 text-center">FECHA 6</div>
-  </div>
+    <div class="row content-inner">
+        <div class="col-md-2 text-center">FECHA 1</div>
+        <div class="col-md-2 text-center">FECHA 2</div>
+        <div class="col-md-2 text-center">FECHA 3</div>
+        <div class="col-md-2 text-center">FECHA 4</div>
+        <div class="col-md-2 text-center">FECHA 5</div>
+        <div class="col-md-2 text-center">FECHA 6</div>
+    </div>
 </div>
 <div class="hidden-xs hidden-sm scores-body">
     <div class="row content-inner">

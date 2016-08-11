@@ -8,9 +8,8 @@
   /** @ngInject */
   function LoginController($timeout, toastr, $auth, $state) {
     var vm = this;
-    console.log('asd');
+
     vm.submitForm = function(form) {
-      console.log('abb');
 
       vm.submitted = true;
       // check to make sure the form is completely valid
@@ -29,7 +28,14 @@
           .catch(function(response) {
             //$log.info(response);
             vm.server = response.data;
-            toastr.error(response.data.non_field_errors[0]);
+            try {
+              if(response.data.non_field_errors[0] !== null){
+                toastr.error(response.data.non_field_errors[0]);
+              }
+            }
+            catch(err) {
+            }
+
             // Si ha habido errores, llegaremos a esta función
           });
       }
