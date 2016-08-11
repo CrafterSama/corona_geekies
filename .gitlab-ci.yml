@@ -1,11 +1,11 @@
-deploy develop:
+deploy dev:
   script:
   - export HOME=/root
   - cd config/capistrano
   - mkdir .capistrano
   - touch .capistrano/metrics
-  - cap develop deploy
+  - cap dev deploy
   type: deploy
   tags:
   only:
-  - develop
+  - dev
