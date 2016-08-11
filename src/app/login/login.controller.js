@@ -28,7 +28,14 @@
           .catch(function(response) {
             //$log.info(response);
             vm.server = response.data;
-            toastr.error(response.data.non_field_errors[0]);
+            try {
+              if(response.data.non_field_errors[0] !== null){
+                toastr.error(response.data.non_field_errors[0]);
+              }
+            }
+            catch(err) {
+            }
+
             // Si ha habido errores, llegaremos a esta función
           });
       }
