@@ -7,4 +7,4 @@ echo 'npm bower gulp'
 cd $DIR_APP && npm install && bower install && gulp build
 
 echo 'hack para symlink'
-ln -s $DIR/current/dist/asset/images $DIR/current/dist/images
+ln -s $DIR/current/dist/assets/images $DIR/current/dist/images
