@@ -105,6 +105,11 @@ h3.carousel-home-title {
     height: 20px;
 }
 
+.carousel-caption {
+    right: 5%;
+    left: 5%;
+}
+
 .carousel-control.right, .carousel-control.left {
 	background-image:none;
 }
@@ -494,17 +499,21 @@ h3.carousel-home-title {
 
 @media (min-width: 993px) and (max-width: 1250px) {
 	.btn-group .btn-success {
-		padding: 10px 105px;
+		padding: 10px 145px;
 	}
 
 	.btn-group .btn-warning {
-		padding: 10px 105px;
+		padding: 10px 145px;
 	}
 }
 
 @media (max-width: 993px) {
 	.social-buttons {
 		display: none;
+	}
+	.social-login {
+		border-left: none;
+		padding-bottom: 20px;
 	}
 }
 
@@ -521,11 +530,19 @@ h3.carousel-home-title {
 	}
 
 	.btn-group .btn-success {
-		    padding: 10px 70px;
+		    padding: 10px 120px;
 	}
 
 	.btn-group .btn-warning {
-		    padding: 10px 70px;
+		    padding: 10px 120px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.carousel-caption {
+		right: 5%;
+		left: 5%;
+    	/*padding-bottom: 30px;*/
 	}
 }
 
@@ -542,11 +559,11 @@ h3.carousel-home-title {
 
 @media (width: 768px) {
 	.btn-group .btn-success {
-		padding: 10px 65px;
+		padding: 10px 125px;
 	}
 
 	.btn-group .btn-warning {
-		padding: 10px 65px;
+		padding: 10px 125px;
 	}
 }
 
@@ -560,6 +577,16 @@ h3.carousel-home-title {
 	}
 }
 
+@media (min-width: 590px) and (max-width: 600px) {
+	.btn-group .btn-success {
+		padding: 10px 85px;
+	}
+
+	.btn-group .btn-warning {
+		padding: 10px 85px;
+	}
+}
+
 @media (min-width: 322px) and (max-width: 600px) {
 	h1.carousel-home-title {
 		font-size: 2.9em;
@@ -568,16 +595,35 @@ h3.carousel-home-title {
 	h3.carousel-home-title {
 		font-size: 2.6em;
 	}
+}
 
+@media (min-width: 509px) and (max-width: 589px) {
+	.btn-group .btn-success {
+		padding: 10px 75px;
+	}
+
+	.btn-group .btn-warning {
+		padding: 10px 75px;
+	}
+}
+
+@media (min-width: 479px) and (max-width: 508px) {
+	.btn-group .btn-success {
+		padding: 10px 55px;
+	}
+
+	.btn-group .btn-warning {
+		padding: 10px 55px;
+	}
+}
+
+@media (min-width: 322px) and (max-width: 478px) {
 	.btn-group .btn-success {
 		padding: 10px 45px;
 	}
 
 	.btn-group .btn-warning {
 		padding: 10px 45px;
-	}
-	.overlay {
-	    padding-top: 100px;
 	}
 }
 
@@ -594,6 +640,19 @@ h3.carousel-home-title {
 	}
 	.btn-group .btn-warning {
 		padding: 10px 10px;
+	}
+
+	.login-form .col-md-6,
+	.register-form .col-md-8,
+	.register-form .col-md-8 > .col-md-6 {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.box-items > .row > .col-md-12.items,
+	.box-items > .row > .col-md-12.items > .col-md-4 {
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 
 	.carousel-inner {
