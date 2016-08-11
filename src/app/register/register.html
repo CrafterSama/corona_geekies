@@ -1,111 +1,304 @@
-<div class="container">
-
-  <!-- FORM -->
-  <!-- pass in the variable if our form is valid or invalid -->
-  <form name="userForm" novalidate>
-    <div style="height: 100px;"></div>
-    <h1>Register</h1>
-    <!-- Firstname -->
-    <div class="col-lg-12 col-md-12 col-xs-12">
-      <div class="col-lg-4 col-md-4 col-xs-4">
-        <div class="form-group" ng-class="{ 'has-error' : (userForm.firstname.$invalid || register.server.first_name) && register.submitted}">
-          <label>Nombre</label>
-          <input type="text" name="firstname" class="form-control" placeholder="Nombre" ng-model="register.user.firstname" ng-minlength="3" ng-maxlength="20" required>
-          <p ng-show="userForm.firstname.$invalid && register.submitted" class="help-block">Nombre es Requerido.</p>
-          <p ng-show="userForm.firstname.$error.minlength" class="help-block">Minimo 3 Caracteres.</p>
-          <p ng-show="userForm.firstname.$error.maxlength" class="help-block">Maximo 20 Caracteres.</p>
-          <p class="help-block error-message"
-             data-ng-show="register.server.first_name"
-             ng-repeat="error in register.server.first_name"> {{error}} </p>
-        </div>
+<div class="row navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="content-inner">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <ul class="nav navbar-nav">
+          <li class="navbar-brand"><a href="#"><img src="assets/images/logo-santos.png" alt=""></a></li>
+          <li class="navbar-brand second-brand"><a class="brand-border-left" href="#"><img src="assets/images/logo-corona.png" alt=""></a></li>
+        </ul>
       </div>
 
-      <!-- Lastname -->
-      <div class="col-lg-4 col-md-4 col-xs-4">
-        <div class="form-group" ng-class="{ 'has-error' : (userForm.password.$invalid || register.server.last_name) && register.submitted }">
-          <label>Apellido</label>
-          <input type="text" name="lastname" class="form-control" ng-model="register.user.lastname" placeholder="Apellido" required>
-          <p ng-show="userForm.lastname.$invalid && register.submitted" class="help-block">Apellido es Requerido.</p>
-          <p class="help-block error-message"
-             data-ng-show="register.server.last_name"
-             ng-repeat="error in register.server.last_name"> {{error}} </p>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="row collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-header navbar-right">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Beneficio del Club</a></li>
+          <li><a href="#">El Club Social</a></li>
+          <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/face-s.svg" alt="" /></a></li>
+          <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/google-s.svg" alt="" /></a></li>
+          <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/insta-s.svg" alt="" /></a></li>
+          <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/twitter-s.svg" alt="" /></a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </div>
+</div>
+<div class="row promo-image">
+  <div class="overlay-promo">
+    <div class="container">
+      <h3 class="promo-home-title">Registrate, Juega y Gana<br />premios en el</h3>
+      <h1 class="promo-home-title">Club Santos Corona</h1>
+      <div class="row action-buttons">
+        <div class="btn-group justified sign-buttons" role="group" aria-label="...">
+          <a type="button" href="register.html" id="show-register" class="btn btn-success">Registro</a>
+          <span class="btn diagonal-success"></span>
+          <a type="button" href="#/login" id="show-login" class="btn btn-warning">Ingreso</a>
         </div>
-      </div>
-
-      <!-- Telefono -->
-      <div class="col-lg-4 col-md-4 col-xs-4">
-        <div class="form-group" ng-class="{ 'has-error' : (userForm.phone_cel.$invalid || register.server.phone_cel) && register.submitted }">
-          <label>Teléfono Celular</label>
-          <input type="text" name="phone_cel" class="form-control" ng-model="register.user.phone_cel" placeholder="Teléfono Celular" required>
-          <p ng-show="userForm.phone_cel.$invalid && register.submitted" class="help-block">Teléfono Celular es Requerido.</p>
-          <p class="help-block error-message"
-             data-ng-show="register.server.phone_cel"
-             ng-repeat="error in register.server.phone_cel"> {{error}} </p>
+        <div id="collapseTwo" class="register-form collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <form class="row register-form col-md-12" name="userForm" novalidate>
+            <div class="col-md-2">
+              <div class="profile-image col-md-12">
+                <img role="button" id="profile-image" src="assets/images/profile-image.jpg" width="" alt="">
+                <input class="hide" type="file" />
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.firstname.$invalid || register.server.first_name) && register.submitted}">
+                <label for="firstname">Nombre *</label>
+                <input type="text" name="firstname" class="form-control" placeholder="Nombre" ng-model="register.user.firstname" ng-minlength="3" ng-maxlength="20" required>
+                <p ng-show="userForm.firstname.$invalid && register.submitted" class="help-block">* Requerido.</p>
+                <p ng-show="userForm.firstname.$error.minlength" class="help-block">Minimo 3 Caracteres.</p>
+                <p ng-show="userForm.firstname.$error.maxlength" class="help-block">Maximo 20 Caracteres.</p>
+                <p class="help-block error-message"
+                   data-ng-show="register.server.first_name"
+                   ng-repeat="error in register.server.first_name"> {{error}} </p>
+              </div>
+              <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.password.$invalid || register.server.last_name) && register.submitted }">
+                <label for="lastname">Apellido</label>
+                <input type="text" name="lastname" class="form-control" ng-model="register.user.lastname" placeholder="Apellido" required>
+                <p ng-show="userForm.lastname.$invalid && register.submitted" class="help-block">* Requerido.</p>
+                <p class="help-block error-message"
+                   data-ng-show="register.server.last_name"
+                   ng-repeat="error in register.server.last_name"> {{error}} </p>
+              </div>
+              <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.phone_cel.$invalid || register.server.phone_cel) && register.submitted }">
+                <label for="phone_cel">Telefono Celular *</label>
+                <input type="text" name="phone_cel" class="form-control" ng-model="register.user.phone_cel" placeholder="Teléfono Celular" required>
+                <p ng-show="userForm.phone_cel.$invalid && register.submitted" class="help-block">* Requerido.</p>
+                <p class="help-block error-message"
+                   data-ng-show="register.server.phone_cel"
+                   ng-repeat="error in register.server.phone_cel"> {{error}} </p>
+              </div>
+              <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.email.$invalid || register.server.email) && register.submitted}">
+                <label for="email">Correo Electronico</label>
+                <input type="email" name="email" class="form-control" ng-model="register.user.email" placeholder="Correo Electrónico" required>
+                <p ng-show="userForm.email.$invalid && register.submitted" class="help-block">* Requerido.</p>
+                <p class="help-block error-message"
+                   data-ng-show="register.server.email"
+                   ng-repeat="error in register.server.email"> {{error}} </p>
+              </div>
+              <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.alias.$invalid || register.server.username) && register.submitted}">
+                <label for="alias">Alias *</label>
+                <input type="text" name="alias" class="form-control" placeholder="Apodo/Alias" ng-model="register.user.alias" required>
+                <p ng-show="userForm.alias.$invalid && register.submitted" class="help-block">* Requerido.</p>
+                <p class="help-block error-message"
+                   data-ng-show="register.server.username"
+                   ng-repeat="error in register.server.username"> {{error}} </p>
+              </div>
+              <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.birthday.$invalid || register.server.birhtdate)  && register.submitted  }">
+                <label for="birthday">Fecha de Nacimiento *</label>
+                <input type="text" name="birthday" class="form-control" ng-model="register.user.birthday" mask='9999-99-99' placeholder="Ej: 1981-12-31" required>
+                <p ng-show="userForm.birthday.$invalid && register.submitted" class="help-block">* Requerido.</p>
+                <p class="help-block error-message"
+                   data-ng-show="register.server.birhtdate"
+                   ng-repeat="error in register.server.birhtdate"> {{error}} </p>
+              </div>
+              <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.password.$invalid || register.server.password) && register.submitted }">
+                <label for="password">Contraseña *</label>
+                <input type="password" name="password" class="form-control" placeholder="Contraseña" ng-model="register.user.password" required>
+                <p ng-show="userForm.password.$invalid && register.submitted" class="help-block">* Requerida.</p>
+                <p class="help-block error-message"
+                   data-ng-show="register.server.password"
+                   ng-repeat="error in register.server.password"> {{error}} </p>
+              </div>
+              <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.confirm_password.$invalid) && register.submitted}">
+                <label for="confirm password">Confirma Contraseña *</label>
+                <input type="password" name="confirm_password" class="form-control" placeholder="Confirmar Contraseña" ng-model="register.user.confirm_password" required>
+                <p ng-show="userForm.confirm_password.$invalid && register.submitted" class="help-block">* Requerida.</p>
+              </div>
+              <div class="radio col-md-12">
+                <label>
+                  <input type="radio" name="accept"> Acepto los Terminos
+                </label>
+              </div>
+              <div class="form-group col-md-12">
+                <button type="button" class="btn btn-warning btn-block" data-ng-click="register.submitForm(userForm)">Registrar</button>
+              </div>
+            </div>
+            <div class="col-md-2 social-login text-center">
+              <p>Registrese Usando sus cuentas de Redes Sociales</p>
+              <a href="#"><img src="assets/images/face-s.svg" alt="" /></a>
+              <a href="#"><img src="assets/images/google-s.svg" alt="" /></a>
+              <a href="#"><img src="assets/images/insta-s.svg" alt="" /></a>
+              <a href="#"><img src="assets/images/twitter-s.svg" alt="" /></a>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-    <div class="col-lg-12 col-md-12 col-xs-12">
-      <!-- Email -->
-      <div class="col-lg-4 col-md-4 col-xs-4">
-        <div class="form-group" ng-class="{ 'has-error' : (userForm.email.$invalid || register.server.email) && register.submitted}">
-          <label>Correo Electrónico</label>
-          <input type="email" name="email" class="form-control" ng-model="register.user.email" placeholder="Correo Electrónico" required>
-          <p ng-show="userForm.email.$invalid && register.submitted" class="help-block">Correo electrónico es Requerido.</p>
-          <p class="help-block error-message"
-             data-ng-show="register.server.email"
-             ng-repeat="error in register.server.email"> {{error}} </p>
+  </div>
+</div>
+<div class="hidden-md hidden-lg scores-body">
+  <div class="row content-inner">
+    <div class="col-md-2 score-item">
+      <div class="scores-header">
+        <div class="row content-inner">
+          <div class="text-center">FECHA 1</div>
         </div>
       </div>
-
-      <!-- Apodo/Alia -->
-      <div class="col-lg-4 col-md-4 col-xs-4">
-        <div class="form-group" ng-class="{ 'has-error' : (userForm.alias.$invalid || register.server.username) && register.submitted}">
-          <label>Apodo/Alias</label>
-          <input type="text" name="alias" class="form-control" placeholder="Apodo/Alias" ng-model="register.user.alias" required>
-          <p ng-show="userForm.alias.$invalid && register.submitted" class="help-block">Apodo/Alias es Requerido.</p>
-          <p class="help-block error-message"
-             data-ng-show="register.server.username"
-             ng-repeat="error in register.server.username"> {{error}} </p>
+      <div class="row scores-body-top">
+        <div class="score-box">
+          <div class="score-box-item-1 team-logo">
+            <img src="assets/images/logo-santos.png" width="" alt="">
+          </div>
+          <div class="score-box-item-2 text-center">CS</div>
+          <div class="score-box-item-3 score text-center">
+            <span>3</span>
+          </div>
         </div>
       </div>
-
-      <!-- Fecha de Nacimiento -->
-      <div class="col-lg-4 col-md-4 col-xs-4">
-        <div class="form-group" ng-class="{ 'has-error' : (userForm.birthday.$invalid || register.server.birhtdate)  && register.submitted  }">
-          <label>Fecha de Nacimiento</label>
-          <input type="text" name="birthday" class="form-control" ng-model="register.user.birthday" mask='9999-12-31' placeholder="Ej: 1981-12-31" required>
-          <p ng-show="userForm.birthday.$invalid && register.submitted" class="help-block">Fecha de Nacimiento es Requerido.</p>
-          <p class="help-block error-message"
-             data-ng-show="register.server.birhtdate"
-             ng-repeat="error in register.server.birhtdate"> {{error}} </p>
+      <div class="row scores-body-bottom">
+        <div class="score-box">
+          <div class="score-box-item-1 team-logo">
+            <img src="assets/images/team-2.png" width="" alt="">
+          </div>
+          <div class="score-box-item-2 text-center">XL</div>
+          <div class="score-box-item-3 score text-center">
+            <span>1</span>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-lg-12 col-md-12 col-xs-12">
-      <!-- Password -->
-      <div class="col-lg-4 col-md-4 col-xs-4">
-        <div class="form-group" ng-class="{ 'has-error' : (userForm.password.$invalid || register.server.password) && register.submitted }">
-          <label>Contraseña</label>
-          <input type="password" name="password" class="form-control" placeholder="Contraseña" ng-model="register.user.password" required>
-          <p ng-show="userForm.password.$invalid && register.submitted" class="help-block">Password is Requerido.</p>
-          <p class="help-block error-message"
-             data-ng-show="register.server.password"
-             ng-repeat="error in register.server.password"> {{error}} </p>
+  </div>
+</div>
+<div class="hidden-xs hidden-sm scores-header">
+  <div class="row content-inner">
+    <div class="col-md-2 text-center">FECHA 1</div>
+    <div class="col-md-2 text-center">FECHA 2</div>
+    <div class="col-md-2 text-center">FECHA 3</div>
+    <div class="col-md-2 text-center">FECHA 4</div>
+    <div class="col-md-2 text-center">FECHA 5</div>
+    <div class="col-md-2 text-center">FECHA 6</div>
+  </div>
+</div>
+<div class="hidden-xs hidden-sm scores-body">
+  <div class="row content-inner">
+    <div class="col-md-2 score-item">
+      <div class="row scores-body-top">
+        <div class="score-box">
+          <div class="score-box-item-1 team-logo">
+            <img src="assets/images/logo-santos.png" width="" alt="">
+          </div>
+          <div class="score-box-item-2 text-center">CS</div>
+          <div class="score-box-item-3 score text-center">
+            <span>3</span>
+          </div>
         </div>
       </div>
-
-      <!-- Confirm-Password -->
-      <div class="col-lg-4 col-md-4 col-xs-4">
-        <div class="form-group" ng-class="{ 'has-error' : (userForm.confirm_password.$invalid) && register.submitted}">
-          <label>Confirmar Contraseña</label>
-          <input type="password" name="confirm_password" class="form-control" placeholder="Confirmar Contraseña" ng-model="register.user.confirm_password" required>
-          <p ng-show="userForm.confirm_password.$invalid && register.submitted" class="help-block">You name is required.</p>
+      <div class="row scores-body-bottom">
+        <div class="score-box">
+          <div class="score-box-item-1 team-logo">
+            <img src="assets/images/team-2.png" width="" alt="">
+          </div>
+          <div class="score-box-item-2 text-center">XL</div>
+          <div class="score-box-item-3 score text-center">
+            <span>1</span>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-lg-12 text-right">
-        <button type="button" class="btn btn-primary" data-ng-click="register.submitForm(userForm)">Submit</button>
+    <div class="col-md-2 score-item">
+      <div class="row scores-body-top">
+        <div class="score-box">
+          <div class="score-box-item-1 team-logo">
+            <img src="assets/images/logo-santos.png" width="" alt="">
+          </div>
+          <div class="score-box-item-2 text-center">CS</div>
+          <div class="score-box-item-3 score text-center">
+            <span>3</span>
+          </div>
+        </div>
+      </div>
+      <div class="row scores-body-bottom">
+        <div class="score-box">
+          <div class="score-box-item-1 team-logo">
+            <img src="assets/images/team-2.png" width="" alt="">
+          </div>
+          <div class="score-box-item-2 text-center">XL</div>
+          <div class="score-box-item-3 score text-center">
+            <span>1</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </form>
-
+    <div class=" col-md-2 score-item">
+      <div class="row scores-body-top">
+        <div class="score-box">
+          <div class="score-box-item-1 team-logo">
+            <img src="assets/images/logo-santos.png" width="" alt="">
+          </div>
+          <div class="score-box-item-2 text-center">CS</div>
+          <div class="score-box-item-3 score text-center">
+            <span>3</span>
+          </div>
+        </div>
+      </div>
+      <div class="row scores-body-bottom">
+        <div class="score-box">
+          <div class="score-box-item-1 team-logo">
+            <img src="assets/images/team-2.png" width="" alt="">
+          </div>
+          <div class="score-box-item-2 text-center">XL</div>
+          <div class="score-box-item-3 score text-center">
+            <span>1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-md-2 score-item">
+      <div class="row scores-body-top">
+        <div class="score-box">
+          <div class="score-box-item-1 team-logo">
+            <img src="assets/images/logo-santos.png" width="" alt="">
+          </div>
+          <div class="score-box-item-2 text-center">CS</div>
+          <div class="score-box-item-3 score text-center">
+            <span>3</span>
+          </div>
+        </div>
+      </div>
+      <div class="row scores-body-bottom">
+        <div class="score-box">
+          <div class="score-box-item-1 team-logo">
+            <img src="assets/images/team-2.png" width="" alt="">
+          </div>
+          <div class="score-box-item-2 text-center">XL</div>
+          <div class="score-box-item-3 score text-center">
+            <span>1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-md-2 score-item">
+      <div class="row scores-body-top">
+        <div class="score-box">
+          <div class="score-box-item-1 team-logo">
+            <img src="assets/images/logo-santos.png" width="" alt="">
+          </div>
+          <div class="score-box-item-2 text-center">CS</div>
+          <div class="score-box-item-3 score text-center">
+            <span>3</span>
+          </div>
+        </div>
+      </div>
+      <div class="row scores-body-bottom">
+        <div class="score-box">
+          <div class="score-box-item-1 team-logo">
+            <img src="assets/images/team-2.png" width="" alt="">
+          </div>
+          <div class="score-box-item-2 text-center">XL</div>
+          <div class="score-box-item-3 score text-center">
+            <span>1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
