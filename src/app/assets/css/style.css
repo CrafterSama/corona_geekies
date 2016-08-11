@@ -340,12 +340,12 @@ h3.carousel-home-title {
 
 .promo-image {
 	background-image: url(../images/santos-team-large.jpg);
-  	-moz-background-size: cover;
+  	/*-moz-background-size: cover;
   	-o-background-size: cover;
   	-webkit-background-size: cover;
+	background-size: cover;*/
   	background-position: top center;
   	background-repeat: no-repeat;
-  	background-size: cover;
   	margin: 0;
 }
 
