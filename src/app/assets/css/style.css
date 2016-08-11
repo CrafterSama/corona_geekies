@@ -25,6 +25,12 @@ h3.carousel-home-title {
 	font-weight: 700;
 }
 
+.back-image {
+   position: relative;
+   width: 100%;
+   max-width: 500px;
+}
+
 .brand-border-left {
 	border-left: 3px solid #FFF;
 }
@@ -224,6 +230,63 @@ h3.carousel-home-title {
     background-color: #008066;
 }
 
+.overlay-button-image,
+.overlay-button-text {
+	position: absolute;
+	width: 100%;
+	max-width: 500px;
+	height: 100%;
+	max-height: 500px;
+	z-index: 1006;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 15px;
+	display: -o-box;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -o-flex;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-flow: row wrap;
+	justify-content: space-around;
+
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay-button-image img {
+	flex: 0;
+	width: 70%;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.overlay-button-image img:hover {
+	width: 90%;
+}
+
+.overlay-button-text h3 {
+	font-size: 3em;
+	color: #fff;
+	transition: all;
+	font-weight: 500;
+	flex: 1 auto;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.overlay-button-text h3:hover {
+	text-shadow: 0 0 4px #333;
+	font-size: 3.4em;
+}
+
 .overlay-slider {
 	background: rgba(102,102,102,0.1);
 	background: -moz-linear-gradient(top, rgba(33,31,32,0.1) 0%, rgba(33,31,32,1) 60%);
@@ -274,6 +337,8 @@ h3.carousel-home-title {
 	font-size: 4.2em;
 	margin: 35px;
 }
+
+
 
 .panel {
 	border-radius: 0px;
@@ -658,6 +723,43 @@ h3.carousel-home-title {
 
 	.carousel-indicators {
 	    bottom: 0px;
+	}
+}
+
+@media screen and (width: 800px) {
+	.overlay-button-image,
+	.overlay-button-text {
+    	left: 110px;
+	}
+	.overlay-button-text {
+		font-size: 2em;
+	}
+	.overlay-button-text:hover {
+		font-size: 2.4em;
+	}
+}
+@media screen and (width: 768px) {
+	.overlay-button-image,
+	.overlay-button-text {
+    	left: 110px;
+	}
+	.overlay-button-text {
+		font-size: 2em;
+	}
+	.overlay-button-text:hover {
+		font-size: 2.4em;
+	}
+}
+@media screen and (width: 600px) {
+	.overlay-button-image,
+	.overlay-button-text {
+    	left: 35px;
+	}
+	.overlay-button-text {
+		font-size: 2em;
+	}
+	.overlay-button-text:hover {
+		font-size: 2.4em;
 	}
 }
 
