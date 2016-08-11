@@ -1,4 +1,4 @@
-deploy develop:
+deploy dev:
   script:
   - export HOME=/root
   - cd config/capistrano
@@ -8,4 +8,4 @@ deploy develop:
   type: deploy
   tags:
   only:
-  - develop
+  - dev
