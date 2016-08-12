@@ -15,7 +15,7 @@
 
     $http({
       method: 'GET',
-      url: 'http://dev.corona.geekies.co:8000/accounts/',
+      url: 'http://dev.corona.geekies.co:8000/accounts/'
     }).then(function successCallback(response) {
       vm.user = response.data;
       // this callback will be called asynchronously

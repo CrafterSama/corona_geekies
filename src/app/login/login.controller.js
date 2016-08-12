@@ -6,8 +6,9 @@
     .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function LoginController($timeout, toastr, $auth, $state, $scope) {
+  function LoginController($timeout, toastr, $auth, $state, $scope, $remember) {
     var vm = this;
+    $scope.remember = false;
 
     vm.submitForm = function(form) {
 
@@ -16,8 +17,8 @@
       if (form.$valid) {
 
         $auth.login({
-            username: vm.user.username,
-            password: vm.user.password
+            username: $scope.username,
+            password: $scope.password
           })
           .then(function() {
             // Si se ha registrado correctamente,
@@ -41,6 +42,26 @@
       }
 
     };
+
+
+    if ($remember('username') && $remember('password') ) {
+      $scope.remember = true;
+      
+    }
+
+      $scope.username = $remember('username');
+      $scope.password = $remember('password');
+
+    $scope.rememberMe = function() {
+      if ($scope.remember) {
+        $remember('username', $scope.username);
+        $remember('password', $scope.password);
+      } else {
+        $remember('username', '');
+        $remember('password', '');
+      }
+    };
+
 
     $scope.myInterval = 5000;
     $scope.noWrapSlides = false;
