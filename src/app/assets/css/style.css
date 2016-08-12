@@ -616,6 +616,11 @@ h3.carousel-home-title {
 	width: 45px;
 }
 
+.message-alert{
+	font-size: 13px!important;
+	color: whitesmoke!important;
+	margin: 0 0 0px;
+}
 
 @media (min-width: 1280px) {
 	.btn-group .btn-success {

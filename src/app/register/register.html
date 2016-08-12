@@ -50,43 +50,43 @@
             </div>
             <div class="col-md-8">
               <div class="col-lg-12">
-              <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.firstname.$invalid || register.server.first_name) && register.submitted && !userForm.firstname.$pristine }">
+              <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.firstname.$invalid || register.server.first_name) && register.submitted }">
                 <label for="firstname" style="font-size: 14px">Nombre *</label>
                 <input type="text" name="firstname" class="form-control" placeholder="Nombre" ng-model="register.user.firstname" ng-pattern="/^[a-zA-Z ]{1,25}$/" ng-minlength="3" ng-maxlength="15" required>
-                <p ng-show="userForm.firstname.$invalid && register.submitted && !userForm.phone_cel.$pristine" class="help-block"><b>* Requerido.</b></p>
-                <p style="color:#a94442" ng-show="userForm.firstname.$error.minlength" class="help-block"><b>* Minimo 3 Caracteres.</b></p>
-                <p style="color:#a94442" ng-show="userForm.firstname.$error.maxlength" class="help-block"><b>* Maximo 15 Caracteres.</b></p>
+                <p ng-show="userForm.firstname.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
+                <p style="color:#a94442" ng-show="userForm.firstname.$error.minlength" class="message-alert"><b>* Minimo 3 Caracteres.</b></p>
+                <p style="color:#a94442" ng-show="userForm.firstname.$error.maxlength" class="message-alert"><b>* Maximo 15 Caracteres.</b></p>
                 <p ng-show="userForm.firstname.$error.pattern" style="color:#a94442"><b>* Solo Caracteres.</b></p>
-                <p class="help-block error-message"
+                <p class="help-block message-alert"
                    data-ng-show="register.server.first_name"
                    ng-repeat="error in register.server.first_name"><b> {{error}} </b></p>
               </div>
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.password.$invalid || register.server.last_name) && register.submitted }">
                 <label for="lastname" style="font-size: 14px">Apellido *</label>
                 <input type="text" name="lastname" class="form-control" ng-model="register.user.lastname" ng-pattern="/^[a-zA-Z ]{1,25}$/" ng-minlength="3" ng-maxlength="15" placeholder="Apellido" required>
-                <p ng-show="userForm.lastname.$invalid && register.submitted" class="help-block"><b>* Requerido.</b></p>
-                <p style="color:#a94442" ng-show="userForm.lastname.$error.minlength" class="help-block"><b>* Minimo 3 Caracteres.</b></p>
-                <p style="color:#a94442" ng-show="userForm.lastname.$error.maxlength" class="help-block"><b>* Maximo 15 Caracteres.</b></p>
+                <p ng-show="userForm.lastname.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
+                <p style="color:#a94442" ng-show="userForm.lastname.$error.minlength" class="message-alert"><b>* Minimo 3 Caracteres.</b></p>
+                <p style="color:#a94442" ng-show="userForm.lastname.$error.maxlength" class="message-alert"><b>* Maximo 15 Caracteres.</b></p>
                 <p ng-show="userForm.lastname.$error.pattern" style="color:#a94442"><b>* Solo Caracteres.</b></p>
-                <p class="help-block error-message"
+                <p class="help-block message-alert"
                    data-ng-show="register.server.last_name"
                    ng-repeat="error in register.server.last_name"><b>{{error}} </b></p>
               </div>
               </div>
                 <div class="col-lg-12">
-                <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.phone_cel.$invalid || register.server.telephone && !userForm.phone_cel.$pristine ) && register.submitted }">
+                <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.phone_cel.$invalid || register.server.telephone ) && register.submitted }">
                 <label for="phone_cel" style="font-size: 14px">Teléfono Celular *</label>
                 <input type="text" name="phone_cel" class="form-control" ng-model="register.user.phone_cel" mask="(999) 999-9999" placeholder="Teléfono Celular" required>
-                <p ng-show="userForm.phone_cel.$invalid && register.submitted && !userForm.phone_cel.$pristine" class="help-block"><b>* Requerido.</b></p>
-                <p class="help-block error-message"
+                <p ng-show="userForm.phone_cel.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
+                <p class="help-block message-alert"
                    data-ng-show="register.server.telephone"
                    ng-repeat="error in register.server.telephone"> {{error}} </p>
               </div>
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.email.$invalid || register.server.email) && register.submitted}">
                 <label for="email" style="font-size: 14px">Correo Electrónico *</label>
                 <input type="email" name="email" class="form-control" ng-model="register.user.email" ng-pattern="/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i" placeholder="Correo Electrónico" required>
-                <p ng-show="userForm.email.$invalid && register.submitted" class="help-block"><b>* Requerido.</b></p>
-                <p class="help-block error-message"
+                <p ng-show="userForm.email.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
+                <p class="help-block message-alert"
                    data-ng-show="register.server.email"
                    ng-repeat="error in register.server.email"><b> {{error}} </b></p>
               </div>
@@ -95,19 +95,19 @@
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.alias.$invalid || register.server.username) && register.submitted}">
                 <label for="alias" style="font-size: 14px">Alias *</label>
                 <input type="text" name="alias" class="form-control" placeholder="Alias" ng-pattern="/^[a-zA-Z]\w{3,14}$/" ng-maxlength="5" ng-minlength="3" ng-model="register.user.alias" required>
-                <p style="color:#a94442" ng-show="userForm.alias.$error.minlength" class="help-block"><b>* Minimo 3 Caracteres.</b></p>
-                <p ng-show="userForm.alias.$invalid && register.submitted" class="help-block"><b>* Requerido.</b></p>
-                <p style="color:#a94442" ng-show="userForm.alias.$error.maxlength" class="help-block"><b>* Maximo 5 Caracteres.</b></p>
-                <p class="help-block error-message"
+                <p style="" ng-show="userForm.alias.$error.minlength" class="message-alert"><b>* Minimo 3 Caracteres.</b></p>
+                <p ng-show="userForm.alias.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
+                <p style="" ng-show="userForm.alias.$error.maxlength" class="message-alert"><b>* Maximo 5 Caracteres.</b></p>
+                <p class="help-block message-alert"
                    data-ng-show="register.server.username"
                    ng-repeat="error in register.server.username"><b> {{error}} </b></p>
-                <p ng-show="userForm.alias.$error.pattern" style="color:#a94442"><b>* Solo Caracteres ó Numeros.</b></p>
+                <p class="help-block message-alert" ng-show="userForm.alias.$error.pattern" ><b>* Solo Caracteres ó Numeros.</b></p>
               </div>
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.birthday.$invalid || register.server.birhtdate)  && register.submitted  }">
                 <label for="birthday" style="font-size: 14px">Fecha de Nacimiento *</label>
                 <input type="text" name="birthday" class="form-control" ng-model="register.user.birthday" mask='99-99-9999' placeholder="Ej: 31-12-1981" required>
-                <p ng-show="userForm.birthday.$invalid && register.submitted" class="help-block"><b>* Requerido.</b></p>
-                <p class="help-block error-message"
+                <p ng-show="userForm.birthday.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
+                <p class="help-block message-alert"
                    data-ng-show="register.server.birhtdate"
                    ng-repeat="error in register.server.birthdate"><b> {{error}} </b></p>
               </div>
@@ -116,16 +116,16 @@
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.password.$invalid || register.server.password) && register.submitted }">
                 <label for="password" style="font-size: 14px">Contraseña *</label>
                 <input type="password" name="password" class="form-control" placeholder="Contraseña" ng-model="register.user.password" required>
-                <p ng-show="userForm.password.$invalid && register.submitted" class="help-block"><b>* Requerida.</b></p>
-                <p class="help-block error-message"
+                <p ng-show="userForm.password.$invalid && register.submitted" class="message-alert"><b>* Requerida.</b></p>
+                <p class="help-block message-alert"
                    data-ng-show="register.server.password"
                    ng-repeat="error in register.server.password"><b> {{error}} </b></p>
               </div>
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.confirm_password.$invalid || userForm.confirm_password.$error.passwordVerify) && register.submitted}">
                 <label for="confirm password" style="font-size: 14px">Confirmar Contraseña *</label>
                 <input type="password" name="confirm_password" class="form-control" placeholder="Confirmar Contraseña" ng-model="register.user.confirm_password" data-password-verify="register.user.password" required>
-                <p ng-show="userForm.confirm_password.$invalid && register.submitted" class="help-block"><b>* Requerida.</b></p>
-                <p style="color:#a94442" ng-show="userForm.confirm_password.$error.passwordVerify" class="help-block"><b>* Campos no coinciden.</b></p>
+                <p ng-show="userForm.confirm_password.$invalid && register.submitted" class="message-alert"><b>* Requerida.</b></p>
+                <p style="color:#a94442" ng-show="userForm.confirm_password.$error.passwordVerify" class="message-alert"><b>* Campos no coinciden.</b></p>
               </div>
                     </div>
               <div class="radio col-md-12">
