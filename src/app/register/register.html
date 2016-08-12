@@ -56,7 +56,7 @@
                 <p ng-show="userForm.firstname.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
                 <p style="color:#a94442" ng-show="userForm.firstname.$error.minlength" class="message-alert"><b>* Minimo 3 Caracteres.</b></p>
                 <p style="color:#a94442" ng-show="userForm.firstname.$error.maxlength" class="message-alert"><b>* Maximo 15 Caracteres.</b></p>
-                <p ng-show="userForm.firstname.$error.pattern" style="color:#a94442"><b>* Solo Caracteres.</b></p>
+                <p ng-show="userForm.firstname.$error.pattern" class="help-block message-alert"><b>* Solo texto.</b></p>
                 <p class="help-block message-alert"
                    data-ng-show="register.server.first_name"
                    ng-repeat="error in register.server.first_name"><b> {{error}} </b></p>
@@ -67,7 +67,7 @@
                 <p ng-show="userForm.lastname.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
                 <p style="color:#a94442" ng-show="userForm.lastname.$error.minlength" class="message-alert"><b>* Minimo 3 Caracteres.</b></p>
                 <p style="color:#a94442" ng-show="userForm.lastname.$error.maxlength" class="message-alert"><b>* Maximo 15 Caracteres.</b></p>
-                <p ng-show="userForm.lastname.$error.pattern" style="color:#a94442"><b>* Solo Caracteres.</b></p>
+                <p ng-show="userForm.lastname.$error.pattern" class="help-block message-alert"><b>* Solo texto.</b></p>
                 <p class="help-block message-alert"
                    data-ng-show="register.server.last_name"
                    ng-repeat="error in register.server.last_name"><b>{{error}} </b></p>
