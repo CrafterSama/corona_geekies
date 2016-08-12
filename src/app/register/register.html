@@ -67,13 +67,13 @@
                    data-ng-show="register.server.last_name"
                    ng-repeat="error in register.server.last_name"> {{error}} </p>
               </div>
-              <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.phone_cel.$invalid || register.server.phone_cel) && register.submitted }">
+              <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.phone_cel.$invalid || register.server.telephone) && register.submitted }">
                 <label for="phone_cel">Teléfono Celular *</label>
                 <input type="text" name="phone_cel" class="form-control" ng-model="register.user.phone_cel" mask="(999) 999-9999" placeholder="Teléfono Celular" required>
                 <p ng-show="userForm.phone_cel.$invalid && register.submitted" class="help-block">* Requerido.</p>
                 <p class="help-block error-message"
-                   data-ng-show="register.server.phone_cel"
-                   ng-repeat="error in register.server.phone_cel"> {{error}} </p>
+                   data-ng-show="register.server.telephone"
+                   ng-repeat="error in register.server.telephone"> {{error}} </p>
               </div>
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.email.$invalid || register.server.email) && register.submitted}">
                 <label for="email">Correo Electrónico *</label>
@@ -107,10 +107,11 @@
                    data-ng-show="register.server.password"
                    ng-repeat="error in register.server.password"> {{error}} </p>
               </div>
-              <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.confirm_password.$invalid) && register.submitted}">
+              <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.confirm_password.$invalid || userForm.confirm_password.$error.passwordVerify) && register.submitted}">
                 <label for="confirm password">Confirma Contraseña *</label>
-                <input type="password" name="confirm_password" class="form-control" placeholder="Confirma Contraseña" ng-model="register.user.confirm_password" required>
+                <input type="password" name="confirm_password" class="form-control" placeholder="Confirma Contraseña" ng-model="register.user.confirm_password" data-password-verify="register.user.password" required>
                 <p ng-show="userForm.confirm_password.$invalid && register.submitted" class="help-block">* Requerida.</p>
+                <p style="color:#a94442" ng-show="userForm.confirm_password.$error.passwordVerify" class="help-block">* Campos no coinciden</p>
               </div>
               <div class="radio col-md-12">
                 <label>

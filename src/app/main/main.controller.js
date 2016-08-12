@@ -18,7 +18,6 @@
       url: 'http://dev.corona.geekies.co:8000/accounts/',
     }).then(function successCallback(response) {
       vm.user = response.data;
-      $log.info(response);
       // this callback will be called asynchronously
       // when the response is available
     }, function errorCallback(response) {

@@ -42,8 +42,8 @@
         </div>
         <div class="login-form">
           <form class="row login-form col-md-12" role="form" name="userForm" novalidate >
-            <div class="form-group col-md-6" data-ng-class="{ 'has-error' : (userForm.username.$invalid || register.server.username) && login.submitted}">
-              <label for="email">Alias/Correo Electronico *</label>
+            <div class="form-group col-md-6" data-ng-class="{ 'has-error' : (userForm.username.$invalid || login.server.username) && login.submitted}">
+              <label for="email">Alias/Correo Electronico </label>
               <input type="text" name="username" class="form-control" data-ng-model="login.user.username" placeholder="Alias/Correo Electronico" required />
               <p data-ng-show="userForm.username.$invalid && login.submitted" class="help-block">* Alias/Correo Electronico.</p>
               <p data-ng-show="userForm.username.$error.minlength" class="help-block">* Minimo 3 Caracteres.</p>
@@ -52,8 +52,8 @@
                  data-ng-show="login.server.username"
                  ng-repeat="error in login.server.username"> {{error}} </p>
             </div>
-            <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.password.$invalid || register.server.password) && login.submitted}">
-              <label for="password">Contraseña *</label>
+            <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.password.$invalid || login.server.password) && login.submitted}">
+              <label for="password">Contraseña </label>
               <input type="password" name="password" class="form-control"  placeholder="Contraseña" ng-model="login.user.password" required />
               <p ng-show="userForm.password.$invalid && login.submitted" class="help-block">* Contraseña es Requerido.</p>
               <p class="help-block error-message"

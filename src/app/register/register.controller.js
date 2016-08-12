@@ -11,8 +11,7 @@
   /** @ngInject */
   function RegisterController($scope, $auth, $state) {
     var vm = this;
-      var phone = '(0424)'.replace('/)/g','');
-      console.log(phone);
+
 
     vm.server = [];
     //  localStorage.removeItem('debug');
@@ -28,6 +27,9 @@
           pieces.reverse();
           var reversed = pieces.join('-');
 
+          var phone = vm.user.phone_cel.replace(/[.*+?^${}()|[\]\\-]/g, "");
+          phone = phone.replace(' ', '');
+
 
         $auth.signup({
             username:   vm.user.alias,
@@ -35,19 +37,16 @@
             birthdate:  reversed,
             first_name: vm.user.firstname,
             last_name:  vm.user.lastname,
-            telephone:  '4246644138',
+            telephone:  phone,
             email:      vm.user.email
           })
           .then(function() {
             // Si se ha registrado correctamente,
             // Podemos redirigirle a otra parte
             $state.go('login');
-            // $log.info(result);
-            //$location.path("/private");
           })
           .catch(function(response) {
             vm.server = response.data;
-
             // Si ha habido errores, llegaremos a esta función
           });
       }
