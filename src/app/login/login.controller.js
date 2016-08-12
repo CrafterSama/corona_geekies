@@ -17,7 +17,7 @@
       if (form.$valid) {
 
         $auth.login({
-            username: $scope.username,
+            username_or_email: $scope.username,
             password: $scope.password
           })
           .then(function() {

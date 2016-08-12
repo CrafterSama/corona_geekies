@@ -115,7 +115,7 @@
                 <div class="col-lg-12">
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.password.$invalid || register.server.password) && register.submitted }">
                 <label for="password" style="font-size: 14px">Contraseña *</label>
-                <input type="password" name="password" class="form-control" placeholder="Contraseña" ng-model="register.user.password" required>
+                <input type="password" name="password" class="form-control" placeholder="Contraseña" autocomplete="off" ng-model="register.user.password" required>
                 <p ng-show="userForm.password.$invalid && register.submitted" class="message-alert"><b>* Requerida.</b></p>
                 <p class="help-block message-alert"
                    data-ng-show="register.server.password"
@@ -123,7 +123,7 @@
               </div>
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.confirm_password.$invalid || userForm.confirm_password.$error.passwordVerify) && register.submitted}">
                 <label for="confirm password" style="font-size: 14px">Confirmar Contraseña *</label>
-                <input type="password" name="confirm_password" class="form-control" placeholder="Confirmar Contraseña" ng-model="register.user.confirm_password" data-password-verify="register.user.password" required>
+                <input type="password" name="confirm_password" class="form-control" placeholder="Confirmar Contraseña" autocomplete="off" ng-model="register.user.confirm_password" data-password-verify="register.user.password" required>
                 <p ng-show="userForm.confirm_password.$invalid && register.submitted" class="message-alert"><b>* Requerida.</b></p>
                 <p style="color:#a94442" ng-show="userForm.confirm_password.$error.passwordVerify" class="message-alert"><b>* Campos no coinciden.</b></p>
               </div>
