@@ -6,7 +6,7 @@
     .config(routerConfig);
 
   /** @ngInject */
-  function routerConfig($stateProvider, $urlRouterProvider) {
+  function routerConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 
     function loginRequired($q, $location, $auth) {
       var deferred = $q.defer();
@@ -27,10 +27,10 @@
         url: '/main',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
-        controllerAs: 'main'/*,
+        controllerAs: 'main',
         resolve: {
           loginRequired: loginRequired
-        }*/
+        }
       })
       .state('login', {
         url: '/login',
@@ -52,6 +52,7 @@
       });
 
     $urlRouterProvider.otherwise('/home');
+
   }
 
 })();

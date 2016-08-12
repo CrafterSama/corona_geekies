@@ -18,7 +18,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="row collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-header navbar-right">
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#/home">Inicio</a></li>
                     <li><a href="#">Beneficio del Club</a></li>
                     <li><a href="#">El Club Social</a></li>
                     <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/face-s.svg" alt="" /></a></li>
@@ -71,194 +71,415 @@
         </div>
     </div>
 </div>
-<div class="hidden-md hidden-lg scores-body">
-    <div class="row content-inner">
-        <div class="col-md-2 score-item">
-            <div class="scores-header">
+<div id="score-carousel" class="hidden-md hidden-lg scores-carousel slide">
+    <!-- Carousel items -->
+    <div class="scores-carousel-inner">
+        <div class="item active">
+            <div class="scores-body">
                 <div class="row content-inner">
-                    <div class="text-center">FECHA 1</div>
+                    <div class="col-md-2 score-item">
+                        <div class="scores-header">
+                            <div class="row content-inner">
+                                <div class="text-center">FECHA 1</div>
+                            </div>
+                        </div>
+                        <div class="scores-body-top">
+                            <div class="score-box">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/logo-santos.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">CS</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scores-body-bottom">
+                            <div class="score-box bottom">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/team-2.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">XL</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="scores-body-top">
-                <div class="score-box">
-                    <div class="score-box-item-1 team-logo">
-                        <img src="assets/images/logo-santos.png" width="" alt="">
-                    </div>
-                    <div class="score-box-item-2 text-center">CS</div>
-                    <div class="score-box-item-3 score text-center">
-                        <span>3</span>
-                    </div>
-                </div>
-            </div>
-            <div class="scores-body-bottom">
-                <div class="score-box bottom">
-                    <div class="score-box-item-1 team-logo">
-                        <img src="assets/images/team-2.png" width="" alt="">
-                    </div>
-                    <div class="score-box-item-2 text-center">XL</div>
-                    <div class="score-box-item-3 score text-center">
-                        <span>1</span>
+        </div><!--/item-->
+        <div class="item">
+            <div class="scores-body">
+                <div class="row content-inner">
+                    <div class="col-md-2 score-item">
+                        <div class="scores-header">
+                            <div class="row content-inner">
+                                <div class="text-center">FECHA 1</div>
+                            </div>
+                        </div>
+                        <div class="scores-body-top">
+                            <div class="score-box">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/logo-santos.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">CS</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scores-body-bottom">
+                            <div class="score-box bottom">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/team-2.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">XL</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div><!--/carousel-inner-->
+    <a class="left scores-carousel-control" href="#scores-carousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right scores-carousel-control" href="#scores-carousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
 </div>
-<div class="hidden-xs hidden-sm scores-header">
-    <div class="row content-inner">
-        <div class="col-md-2 text-center">FECHA 1</div>
-        <div class="col-md-2 text-center">FECHA 2</div>
-        <div class="col-md-2 text-center">FECHA 3</div>
-        <div class="col-md-2 text-center">FECHA 4</div>
-        <div class="col-md-2 text-center">FECHA 5</div>
-        <div class="col-md-2 text-center">FECHA 6</div>
-    </div>
-</div>
-<div class="hidden-xs hidden-sm scores-body">
-    <div class="row content-inner">
-        <div class="col-md-2 score-item">
-            <div class="scores-body-top">
-                <div class="score-box">
-                    <div class="score-box-item-1 team-logo">
-                        <img src="assets/images/logo-santos.png" width="" alt="">
+<div id="score-carousel" class="hidden-xs hidden-sm scores-carousel slide">
+    <!-- Carousel items -->
+    <div class="scores-carousel-inner">
+        <div class="item active">
+            <div class="scores-header">
+                <div class="row content-inner-scores">
+                    <div class="col-md-2 text-center">FECHA 1</div>
+                    <div class="col-md-2 text-center">FECHA 2</div>
+                    <div class="col-md-2 text-center">FECHA 3</div>
+                    <div class="col-md-2 text-center">FECHA 4</div>
+                    <div class="col-md-2 text-center">FECHA 5</div>
+                    <div class="col-md-2 text-center">FECHA 6</div>
+                </div>
+            </div>
+            <div class="scores-body">
+                <div class="row content-inner-scores">
+                    <div class="col-md-2 score-item">
+                        <div class="scores-body-top">
+                            <div class="score-box">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/logo-santos.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">CS</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scores-body-bottom">
+                            <div class="score-box bottom">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/team-2.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">XL</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>1</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="score-box-item-2 text-center">CS</div>
-                    <div class="score-box-item-3 score text-center">
-                        <span>3</span>
+                    <div class="col-md-2 score-item">
+                        <div class="scores-body-top">
+                            <div class="score-box">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/logo-santos.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">CS</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scores-body-bottom">
+                            <div class="score-box bottom">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/team-2.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">XL</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-2 score-item">
+                        <div class="scores-body-top">
+                            <div class="score-box">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/logo-santos.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">CS</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scores-body-bottom">
+                            <div class="score-box bottom">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/team-2.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">XL</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-2 score-item">
+                        <div class="scores-body-top">
+                            <div class="score-box">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/logo-santos.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">CS</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scores-body-bottom">
+                            <div class="score-box bottom">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/team-2.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">XL</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-2 score-item">
+                        <div class="scores-body-top">
+                            <div class="score-box">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/logo-santos.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">CS</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scores-body-bottom">
+                            <div class="score-box bottom">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/team-2.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">XL</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-2 score-item">
+                        <div class="scores-body-top">
+                            <div class="score-box">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/logo-santos.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">CS</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scores-body-bottom">
+                            <div class="score-box bottom">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/team-2.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">XL</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>1</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="scores-body-bottom">
-                <div class="score-box bottom">
-                    <div class="score-box-item-1 team-logo">
-                        <img src="assets/images/team-2.png" width="" alt="">
+        </div><!--/item-->
+        <div class="item">
+            <div class="hidden-xs hidden-sm scores-header">
+                <div class="row content-inner-scores">
+                    <div class="col-md-2 text-center">FECHA 1</div>
+                    <div class="col-md-2 text-center">FECHA 2</div>
+                    <div class="col-md-2 text-center">FECHA 3</div>
+                    <div class="col-md-2 text-center">FECHA 4</div>
+                    <div class="col-md-2 text-center">FECHA 5</div>
+                    <div class="col-md-2 text-center">FECHA 6</div>
+                </div>
+            </div>
+            <div class="hidden-xs hidden-sm scores-body">
+                <div class="row content-inner-scores">
+                    <div class="col-md-2 score-item">
+                        <div class="scores-body-top">
+                            <div class="score-box">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/logo-santos.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">CS</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scores-body-bottom">
+                            <div class="score-box bottom">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/team-2.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">XL</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="score-box-item-2 text-center">XL</div>
-                    <div class="score-box-item-3 score text-center">
-                        <span>1</span>
+                    <div class="col-md-2 score-item">
+                        <div class="scores-body-top">
+                            <div class="score-box">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/logo-santos.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">CS</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scores-body-bottom">
+                            <div class="score-box bottom">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/team-2.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">XL</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-2 score-item">
+                        <div class="scores-body-top">
+                            <div class="score-box">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/logo-santos.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">CS</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scores-body-bottom">
+                            <div class="score-box bottom">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/team-2.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">XL</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-2 score-item">
+                        <div class="scores-body-top">
+                            <div class="score-box">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/logo-santos.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">CS</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scores-body-bottom">
+                            <div class="score-box bottom">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/team-2.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">XL</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-2 score-item">
+                        <div class="scores-body-top">
+                            <div class="score-box">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/logo-santos.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">CS</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scores-body-bottom">
+                            <div class="score-box bottom">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/team-2.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">XL</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-2 score-item">
+                        <div class="scores-body-top">
+                            <div class="score-box">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/logo-santos.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">CS</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scores-body-bottom">
+                            <div class="score-box bottom">
+                                <div class="score-box-item-1 team-logo">
+                                    <img src="assets/images/team-2.png" width="" alt="">
+                                </div>
+                                <div class="score-box-item-2 text-center">XL</div>
+                                <div class="score-box-item-3 score text-center">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-2 score-item">
-            <div class="scores-body-top">
-                <div class="score-box">
-                    <div class="score-box-item-1 team-logo">
-                        <img src="assets/images/logo-santos.png" width="" alt="">
-                    </div>
-                    <div class="score-box-item-2 text-center">CS</div>
-                    <div class="score-box-item-3 score text-center">
-                        <span>3</span>
-                    </div>
-                </div>
-            </div>
-            <div class="scores-body-bottom">
-                <div class="score-box bottom">
-                    <div class="score-box-item-1 team-logo">
-                        <img src="assets/images/team-2.png" width="" alt="">
-                    </div>
-                    <div class="score-box-item-2 text-center">XL</div>
-                    <div class="score-box-item-3 score text-center">
-                        <span>1</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class=" col-md-2 score-item">
-            <div class="scores-body-top">
-                <div class="score-box">
-                    <div class="score-box-item-1 team-logo">
-                        <img src="assets/images/logo-santos.png" width="" alt="">
-                    </div>
-                    <div class="score-box-item-2 text-center">CS</div>
-                    <div class="score-box-item-3 score text-center">
-                        <span>3</span>
-                    </div>
-                </div>
-            </div>
-            <div class="scores-body-bottom">
-                <div class="score-box bottom">
-                    <div class="score-box-item-1 team-logo">
-                        <img src="assets/images/team-2.png" width="" alt="">
-                    </div>
-                    <div class="score-box-item-2 text-center">XL</div>
-                    <div class="score-box-item-3 score text-center">
-                        <span>1</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class=" col-md-2 score-item">
-            <div class="scores-body-top">
-                <div class="score-box">
-                    <div class="score-box-item-1 team-logo">
-                        <img src="assets/images/logo-santos.png" width="" alt="">
-                    </div>
-                    <div class="score-box-item-2 text-center">CS</div>
-                    <div class="score-box-item-3 score text-center">
-                        <span>3</span>
-                    </div>
-                </div>
-            </div>
-            <div class="scores-body-bottom">
-                <div class="score-box bottom">
-                    <div class="score-box-item-1 team-logo">
-                        <img src="assets/images/team-2.png" width="" alt="">
-                    </div>
-                    <div class="score-box-item-2 text-center">XL</div>
-                    <div class="score-box-item-3 score text-center">
-                        <span>1</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class=" col-md-2 score-item">
-            <div class="scores-body-top">
-                <div class="score-box">
-                    <div class="score-box-item-1 team-logo">
-                        <img src="assets/images/logo-santos.png" width="" alt="">
-                    </div>
-                    <div class="score-box-item-2 text-center">CS</div>
-                    <div class="score-box-item-3 score text-center">
-                        <span>3</span>
-                    </div>
-                </div>
-            </div>
-            <div class="scores-body-bottom">
-                <div class="score-box bottom">
-                    <div class="score-box-item-1 team-logo">
-                        <img src="assets/images/team-2.png" width="" alt="">
-                    </div>
-                    <div class="score-box-item-2 text-center">XL</div>
-                    <div class="score-box-item-3 score text-center">
-                        <span>1</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class=" col-md-2 score-item">
-            <div class="scores-body-top">
-                <div class="score-box">
-                    <div class="score-box-item-1 team-logo">
-                        <img src="assets/images/logo-santos.png" width="" alt="">
-                    </div>
-                    <div class="score-box-item-2 text-center">CS</div>
-                    <div class="score-box-item-3 score text-center">
-                        <span>3</span>
-                    </div>
-                </div>
-            </div>
-            <div class="scores-body-bottom">
-                <div class="score-box bottom">
-                    <div class="score-box-item-1 team-logo">
-                        <img src="assets/images/team-2.png" width="" alt="">
-                    </div>
-                    <div class="score-box-item-2 text-center">XL</div>
-                    <div class="score-box-item-3 score text-center">
-                        <span>1</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+        </div><!--/item-->
+    </div><!--/carousel-inner-->
+    <a class="left scores-carousel-control" href="#scores-carousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right scores-carousel-control" href="#scores-carousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div><!--/scores-carousel-->

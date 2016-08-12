@@ -25,6 +25,12 @@ h3.carousel-home-title {
 	font-weight: 700;
 }
 
+.back-image {
+   position: relative;
+   width: 100%;
+   max-width: 500px;
+}
+
 .brand-border-left {
 	border-left: 3px solid #FFF;
 }
@@ -116,7 +122,7 @@ h3.carousel-home-title {
 }
 
 .carousel-control.right, .carousel-control.left {
-	background-image:none;
+	/*background-image:none;*/
 }
 
 .container-full.profile-section {
@@ -125,7 +131,8 @@ h3.carousel-home-title {
 	position: relative;
 }
 
-.content-inner {
+.content-inner,
+.content-inner-scores {
 	margin: 0 auto;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -223,6 +230,63 @@ h3.carousel-home-title {
     background-color: #008066;
 }
 
+.overlay-button-image,
+.overlay-button-text {
+	position: absolute;
+	width: 100%;
+	max-width: 500px;
+	height: 100%;
+	max-height: 500px;
+	z-index: 1006;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 15px;
+	display: -o-box;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -o-flex;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-flow: row wrap;
+	justify-content: space-around;
+
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay-button-image img {
+	flex: 0;
+	width: 70%;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.overlay-button-image img:hover {
+	width: 90%;
+}
+
+.overlay-button-text h3 {
+	font-size: 3em;
+	color: #fff;
+	transition: all;
+	font-weight: 500;
+	flex: 1 auto;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.overlay-button-text h3:hover {
+	text-shadow: 0 0 4px #333;
+	font-size: 3.4em;
+}
+
 .overlay-slider {
 	background: rgba(102,102,102,0.1);
 	background: -moz-linear-gradient(top, rgba(33,31,32,0.1) 0%, rgba(33,31,32,1) 60%);
@@ -258,7 +322,7 @@ h3.carousel-home-title {
 	color: rgb(255,255,255);
 	height: 100%;
 	position: relative;
-	padding-top: 180px;
+	padding-top: 126px;
 	padding-bottom: 50px;
 	z-index: 1003;
 }
@@ -273,6 +337,8 @@ h3.carousel-home-title {
 	font-size: 4.2em;
 	margin: 35px;
 }
+
+
 
 .panel {
 	border-radius: 0px;
@@ -339,12 +405,12 @@ h3.carousel-home-title {
 
 .promo-image {
 	background-image: url(../images/santos-team-large.jpg);
-  	-moz-background-size: cover;
+  	/*-moz-background-size: cover;
   	-o-background-size: cover;
   	-webkit-background-size: cover;
+	background-size: cover;*/
   	background-position: top center;
   	background-repeat: no-repeat;
-  	background-size: cover;
   	margin: 0;
 }
 
@@ -386,6 +452,68 @@ h3.carousel-home-title {
     font-size: 18px;
     line-height: 20px;
 }
+
+.scores-carousel {
+    position: relative;
+}
+
+
+.scores-carousel-inner {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.scores-carousel-inner>.item.active, .scores-carousel-inner>.item.next.left, .scores-carousel-inner>.item.prev.right {
+    left: 0;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.scores-carousel-inner > .item {
+    display: none;
+    position: relative;
+    -webkit-transition: 0.6s ease-in-out left;
+    -moz-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left;
+}
+
+.scores-carousel-inner>.active, .scores-carousel-inner>.next, .scores-carousel-inner>.prev {
+    display: block;
+}
+
+.scores-carousel-control {
+    position: absolute;
+    top: 40%;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    font-size: 20px;
+    color: #fcb724;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,0);
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+.scores-carousel-control.right {
+    right: 0;
+    left: auto;
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+    background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)));
+    background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    background-repeat: repeat-x;
+}
+
+.scores-carousel-control.right, .scores-carousel-control.left {
+    background-image: none;
+}
+
+
 
 .scores-header {
 	background-color: #FCB724;
@@ -500,6 +628,9 @@ h3.carousel-home-title {
 	.overlay {
 		padding-top: 50px;
 	}
+	.content-inner-scores {
+		max-width: 1024px;
+	}
 }
 
 @media (min-width: 993px) and (max-width: 1250px) {
@@ -509,6 +640,9 @@ h3.carousel-home-title {
 
 	.btn-group .btn-warning {
 		padding: 10px 145px;
+	}
+	.content-inner-scores {
+		max-width: 1024px;
 	}
 }
 
@@ -525,6 +659,9 @@ h3.carousel-home-title {
 @media (min-width: 991px) {
 	.content-inner {
 		max-width: 1280px;
+	}
+	.content-inner-scores {
+		max-width: 1024px;
 	}
 
 }
@@ -589,6 +726,43 @@ h3.carousel-home-title {
 	}
 }
 
+@media screen and (width: 800px) {
+	.overlay-button-image,
+	.overlay-button-text {
+    	left: 110px;
+	}
+	.overlay-button-text {
+		font-size: 2em;
+	}
+	.overlay-button-text:hover {
+		font-size: 2.4em;
+	}
+}
+@media screen and (width: 768px) {
+	.overlay-button-image,
+	.overlay-button-text {
+    	left: 110px;
+	}
+	.overlay-button-text {
+		font-size: 2em;
+	}
+	.overlay-button-text:hover {
+		font-size: 2.4em;
+	}
+}
+@media screen and (width: 600px) {
+	.overlay-button-image,
+	.overlay-button-text {
+    	left: 35px;
+	}
+	.overlay-button-text {
+		font-size: 2em;
+	}
+	.overlay-button-text:hover {
+		font-size: 2.4em;
+	}
+}
+
 @media (min-width: 590px) and (max-width: 600px) {
 	.btn-group .btn-success {
 		padding: 10px 85px;
@@ -629,13 +803,23 @@ h3.carousel-home-title {
 	}
 }
 
-@media (min-width: 322px) and (max-width: 478px) {
+@media (min-width: 377px) and (max-width: 478px) {
 	.btn-group .btn-success {
-		padding: 10px 45px;
+		padding: 10px 40px;
 	}
 
 	.btn-group .btn-warning {
-		padding: 10px 45px;
+		padding: 10px 40px;
+	}
+}
+
+@media (min-width: 322px) and (max-width: 401px) {
+	.btn-group .btn-success {
+		padding: 10px 30px;
+	}
+
+	.btn-group .btn-warning {
+		padding: 10px 30px;
 	}
 }
 
