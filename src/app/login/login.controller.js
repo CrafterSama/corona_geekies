@@ -9,7 +9,7 @@
   function LoginController($timeout, toastr, $auth, $state, $scope, $remember) {
     var vm = this;
     $scope.remember = false;
-
+    window.localStorage.removeItem("satellizer_token");
     vm.submitForm = function(form) {
 
       vm.submitted = true;
