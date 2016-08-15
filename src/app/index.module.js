@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('appCorona', ['ngAnimate', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr', 'satellizer', 'ngMask']);
+    .module('appCorona', ['ngAnimate', 'ngResource', 'ui.router', 'toastr', 'satellizer', 'ngMask']);
 
 })();
