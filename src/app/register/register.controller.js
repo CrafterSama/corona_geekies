@@ -9,7 +9,7 @@
     .controller('RegisterController', RegisterController);
 
   /** @ngInject */
-  function RegisterController($scope, $auth, $state) {
+  function RegisterController($scope, $auth, $state, $timeout) {
     var vm = this;
 
 
@@ -18,6 +18,10 @@
 
       vm.submitForm = function(form) {
       vm.submitted = true;
+
+      $timeout(function(){
+          vm.submitted = false;
+      },2000);
 
       // check to make sure the form is completely valid
       if (form.$valid) {
