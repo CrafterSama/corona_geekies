@@ -79,14 +79,14 @@
                 <p ng-show="userForm.phone_cel.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
                 <p class="help-block message-alert"
                    data-ng-show="register.server.telephone && register.submitted"
-                   ng-repeat="error in register.server.telephone"> {{error}} </p>
+                   ng-repeat="error in register.server.telephone"><b> {{error}} </b></p>
               </div>
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.email.$invalid || register.server.email) && register.submitted}">
                 <label for="email" style="font-size: 14px">Correo Electrónico *</label>
                 <input type="email" name="email" class="form-control" ng-model="register.user.email" ng-pattern="/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i" placeholder="Correo Electrónico" required>
                 <p ng-show="userForm.email.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
                 <p class="help-block message-alert"
-                   data-ng-show="register.server.email && register.submitted"
+                   data-ng-show="register.server.email"
                    ng-repeat="error in register.server.email"><b> {{error}} </b></p>
               </div>
                     </div>
