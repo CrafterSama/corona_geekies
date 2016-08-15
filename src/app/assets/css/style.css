@@ -122,7 +122,7 @@ h3.carousel-home-title {
 }
 
 .carousel-control.right, .carousel-control.left {
-	/*background-image:none;*/
+	background-image:none;
 }
 
 .container-full.profile-section {
@@ -649,9 +649,6 @@ h3.carousel-home-title {
 }
 
 @media (max-width: 993px) {
-	.social-buttons {
-		display: none;
-	}
 	.social-login {
 		border-left: none;
 		padding-bottom: 20px;
