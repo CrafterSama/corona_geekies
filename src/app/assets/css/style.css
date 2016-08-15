@@ -188,6 +188,7 @@ h3.carousel-home-title {
     border:  none;
     border-radius: 0;
     margin-bottom: 0;
+	transition: 1s all ease;
     /*box-sizing: border-box;*/
 }
 
@@ -622,20 +623,16 @@ h3.carousel-home-title {
 	margin: 0 0 0px;
 }
 .min{
-	background-color: rgba(0, 128, 102, 0.6);
-	height: 86px;
+	height: 60px;
 	box-shadow: 0 0 10px black;
 	padding-top: 0;
 	transition: 1s all ease;
 }
 .minNav {
-	margin-top: 2%;
-	transition: 1s all ease;
+	margin-top: .5%;
+	transition: .5s all ease;
 }
 
-.prueba img{
-	height: 85px;
-}
 
 @media (min-width: 1280px) {
 	.btn-group .btn-success {
