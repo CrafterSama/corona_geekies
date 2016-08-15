@@ -188,7 +188,6 @@ h3.carousel-home-title {
     border:  none;
     border-radius: 0;
     margin-bottom: 0;
-	transition: 1s all ease;
     /*box-sizing: border-box;*/
 }
 
@@ -323,7 +322,7 @@ h3.carousel-home-title {
 	color: rgb(255,255,255);
 	height: 100%;
 	position: relative;
-	padding-top: 126px;
+	padding-top: 180px;
 	padding-bottom: 50px;
 	z-index: 1003;
 }
@@ -405,7 +404,7 @@ h3.carousel-home-title {
 }
 
 .promo-image {
-	background-image: url(../images/santos-team-large.png);
+	background-image: url(../images/santos-team-large.jpg);
   	/*-moz-background-size: cover;
   	-o-background-size: cover;
   	-webkit-background-size: cover;
@@ -618,41 +617,6 @@ h3.carousel-home-title {
 	width: 15px;
 }
 
-.message-alert{
-	font-size: 13px!important;
-	color: whitesmoke!important;
-	margin: 0 0 0px;
-}
-.min{
-	height: 78px;
-	box-shadow: 0 0 10px black;
-	padding-top: 0;
-	transition: 1s all ease;
-}
-.minNav {
-	margin-top: 1%;
-	transition: .5s all ease;
-}
-
-.santos {
-	margin-top: -12px;
-}
-.santos img {
-	height: 50%;
-	width: 50%;
-}
-.corona{
-	height: 78px;
-	margin-top: -30px;
-}
-
-.prueba {
-	right: 50px;
-	top: 5px;
-}
-.prueba1 {
-	top: 0px;
-}
 
 @media (min-width: 1280px) {
 	.btn-group .btn-success {
@@ -671,7 +635,7 @@ h3.carousel-home-title {
 	}
 }
 
-@media (min-width: 993px) and (max-width: 1250px) {
+@media (min-width: 993px) and (max-width: 1024px) {
 	.btn-group .btn-success {
 		padding: 10px 145px;
 	}
@@ -680,7 +644,7 @@ h3.carousel-home-title {
 		padding: 10px 145px;
 	}
 	.content-inner-scores {
-		max-width: 1024px;
+		max-width: 970px;
 	}
 }
 
@@ -696,7 +660,7 @@ h3.carousel-home-title {
 
 @media (min-width: 991px) {
 	.content-inner {
-		max-width: 1024px;
+		max-width: 1280px;
 	}
 	.content-inner-scores {
 		max-width: 1024px;
