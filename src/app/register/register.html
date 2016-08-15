@@ -1,34 +1,33 @@
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="content-inner">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <ul class="nav navbar-nav">
-          <li class="navbar-brand"><a href="#/home"><img src="assets/images/logo-santos.png" alt=""></a></li>
-          <li class="navbar-brand second-brand"><a class="brand-border-left" href="#/home"><img src="assets/images/logo-corona.png" alt=""></a></li>
-        </ul>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="row collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav navbar-header navbar-right">
-          <li><a href="#/home">Inicio</a></li>
-          <li><a href="#">Beneficio del Club</a></li>
-          <li><a href="#">El Club Social</a></li>
-          <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/face-s.svg" alt="" /></a></li>
-          <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/google-s.svg" alt="" /></a></li>
-          <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/insta-s.svg" alt="" /></a></li>
-          <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/twitter-s.svg" alt="" /></a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" data-my-navscroll data-ng-class="{min:boolChangeClass}">
+    <div class="content-inner">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="nav navbar-nav">
+                    <li class="navbar-brand" ng-class="{santos: boolChangeClass, prueba1: boolChangeClass}"><a href="#/home"><img src="assets/images/logo-santos.png" alt=""></a></li>
+                    <li class="navbar-brand second-brand"><a class="brand-border-left" ng-class="{corona: boolChangeClass, prueba: boolChangeClass}" href="#/home"><img src="assets/images/logo-corona.png" alt=""></a></li>
+                </ul>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="row collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-header navbar-right" ng-class="{minNav:boolChangeClass}">
+                    <li><a href="#/home">Inicio</a></li>
+                    <li><a href="#">Beneficio del Club</a></li>
+                    <li><a href="#">El Club Social</a></li>
+                    <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/face-s.svg" alt="" /></a></li>
+                    <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/google-s.svg" alt="" /></a></li>
+                    <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/insta-s.svg" alt="" /></a></li>
+                    <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/twitter-s.svg" alt="" /></a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
     </div>
-  </div>
 </div>
 <div class="row promo-image">
   <div class="overlay-promo">
@@ -53,23 +52,23 @@
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.firstname.$invalid || register.server.first_name) && register.submitted }">
                 <label for="firstname" style="font-size: 14px">Nombre *</label>
                 <input type="text" name="firstname" class="form-control" placeholder="Nombre" ng-model="register.user.firstname" ng-pattern="/^[a-zA-Z ]{1,25}$/" ng-minlength="3" ng-maxlength="15" required>
-                <p ng-show="userForm.firstname.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
-                <p style="color:#a94442" ng-show="userForm.firstname.$error.minlength" class="message-alert"><b>* Minimo 3 Caracteres.</b></p>
-                <p style="color:#a94442" ng-show="userForm.firstname.$error.maxlength" class="message-alert"><b>* Maximo 15 Caracteres.</b></p>
-                <p ng-show="userForm.firstname.$error.pattern" class="help-block message-alert"><b>* Solo texto.</b></p>
+                <p ng-show="userForm.firstname.$invalid && register.submitted && register.submitted" class="message-alert"><b>* Requerido.</b></p>
+                <p style="color:#a94442" ng-show="userForm.firstname.$error.minlength && register.submitted" class="message-alert"><b>* Minimo 3 Caracteres.</b></p>
+                <p style="color:#a94442" ng-show="userForm.firstname.$error.maxlength && register.submitted" class="message-alert"><b>* Maximo 15 Caracteres.</b></p>
+                <p ng-show="userForm.firstname.$error.pattern && register.submitted" class="help-block message-alert"><b>* Solo texto.</b></p>
                 <p class="help-block message-alert"
-                   data-ng-show="register.server.first_name"
+                   data-ng-show="register.server.first_name && register.submitted"
                    ng-repeat="error in register.server.first_name"><b> {{error}} </b></p>
               </div>
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.password.$invalid || register.server.last_name) && register.submitted }">
                 <label for="lastname" style="font-size: 14px">Apellido *</label>
                 <input type="text" name="lastname" class="form-control" ng-model="register.user.lastname" ng-pattern="/^[a-zA-Z ]{1,25}$/" ng-minlength="3" ng-maxlength="15" placeholder="Apellido" required>
                 <p ng-show="userForm.lastname.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
-                <p style="color:#a94442" ng-show="userForm.lastname.$error.minlength" class="message-alert"><b>* Minimo 3 Caracteres.</b></p>
-                <p style="color:#a94442" ng-show="userForm.lastname.$error.maxlength" class="message-alert"><b>* Maximo 15 Caracteres.</b></p>
-                <p ng-show="userForm.lastname.$error.pattern" class="help-block message-alert"><b>* Solo texto.</b></p>
+                <p style="color:#a94442" ng-show="userForm.lastname.$error.minlength && register.submitted" class="message-alert"><b>* Minimo 3 Caracteres.</b></p>
+                <p style="color:#a94442" ng-show="userForm.lastname.$error.maxlength && register.submitted" class="message-alert"><b>* Maximo 15 Caracteres.</b></p>
+                <p ng-show="userForm.lastname.$error.pattern && register.submitted" class="help-block message-alert"><b>* Solo texto.</b></p>
                 <p class="help-block message-alert"
-                   data-ng-show="register.server.last_name"
+                   data-ng-show="register.server.last_name && register.submitted"
                    ng-repeat="error in register.server.last_name"><b>{{error}} </b></p>
               </div>
               </div>
@@ -79,7 +78,7 @@
                 <input type="text" name="phone_cel" class="form-control" ng-model="register.user.phone_cel" mask="(999) 999-9999" placeholder="Teléfono Celular" required>
                 <p ng-show="userForm.phone_cel.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
                 <p class="help-block message-alert"
-                   data-ng-show="register.server.telephone"
+                   data-ng-show="register.server.telephone && register.submitted"
                    ng-repeat="error in register.server.telephone"> {{error}} </p>
               </div>
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.email.$invalid || register.server.email) && register.submitted}">
@@ -87,7 +86,7 @@
                 <input type="email" name="email" class="form-control" ng-model="register.user.email" ng-pattern="/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i" placeholder="Correo Electrónico" required>
                 <p ng-show="userForm.email.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
                 <p class="help-block message-alert"
-                   data-ng-show="register.server.email"
+                   data-ng-show="register.server.email && register.submitted"
                    ng-repeat="error in register.server.email"><b> {{error}} </b></p>
               </div>
                     </div>
@@ -95,19 +94,19 @@
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.alias.$invalid || register.server.username) && register.submitted}">
                 <label for="alias" style="font-size: 14px">Alias *</label>
                 <input type="text" name="alias" class="form-control" placeholder="Alias" data-ng-pattern="/^[a-zA-Z]\w{3,14}$/" ng-maxlength="10" ng-model="register.user.alias" required>
-                <p ng-show="userForm.alias.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
-                <p style="" ng-show="userForm.alias.$error.maxlength" class="message-alert"><b>* Maximo 10 Caracteres.</b></p>
+                <p ng-show="!userForm.alias.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
+                <p style="" ng-show="userForm.alias.$error.maxlength && register.submitted" class="message-alert"><b>* Maximo 10 Caracteres.</b></p>
                 <p class="help-block message-alert"
-                   data-ng-show="register.server.username"
+                   data-ng-show="register.server.username && register.submitted"
                    ng-repeat="error in register.server.username"><b> {{error}} </b></p>
-                <p class="help-block message-alert" ng-show="userForm.alias.$error.pattern" ><b>* Solo Caracteres ó Numeros.</b></p>
+                <p class="help-block message-alert" ng-show="userForm.alias.$error.pattern && register.submitted" ><b>* Solo Caracteres ó Numeros.</b></p>
               </div>
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.birthday.$invalid || register.server.birhtdate)  && register.submitted  }">
                 <label for="birthday" style="font-size: 14px">Fecha de Nacimiento *</label>
                 <input type="text" name="birthday" class="form-control" ng-model="register.user.birthday" mask='99-99-9999' placeholder="Ej: 31-12-1981" required>
                 <p ng-show="userForm.birthday.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
                 <p class="help-block message-alert"
-                   data-ng-show="register.server.birhtdate"
+                   data-ng-show="register.server.birhtdate && register.submitted"
                    ng-repeat="error in register.server.birthdate"><b> {{error}} </b></p>
               </div>
                     </div>
@@ -117,7 +116,7 @@
                 <input type="password" name="password" class="form-control" placeholder="Contraseña" autocomplete="off" ng-model="register.user.password" required>
                 <p ng-show="userForm.password.$invalid && register.submitted" class="message-alert"><b>* Requerida.</b></p>
                 <p class="help-block message-alert"
-                   data-ng-show="register.server.password"
+                   data-ng-show="register.server.password && register.submitted"
                    ng-repeat="error in register.server.password"><b> {{error}} </b></p>
               </div>
               <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.confirm_password.$invalid || userForm.confirm_password.$error.passwordVerify) && register.submitted}">

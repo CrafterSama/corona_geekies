@@ -405,7 +405,7 @@ h3.carousel-home-title {
 }
 
 .promo-image {
-	background-image: url(../images/santos-team-large.jpg);
+	background-image: url(../images/santos-team-large.png);
   	/*-moz-background-size: cover;
   	-o-background-size: cover;
   	-webkit-background-size: cover;
@@ -623,16 +623,35 @@ h3.carousel-home-title {
 	margin: 0 0 0px;
 }
 .min{
-	height: 60px;
+	height: 78px;
 	box-shadow: 0 0 10px black;
 	padding-top: 0;
 	transition: 1s all ease;
 }
 .minNav {
-	margin-top: .5%;
+	margin-top: 1%;
 	transition: .5s all ease;
 }
 
+.santos {
+	margin-top: -12px;
+}
+.santos img {
+	height: 50%;
+	width: 50%;
+}
+.corona{
+	height: 78px;
+	margin-top: -30px;
+}
+
+.prueba {
+	right: 50px;
+	top: 5px;
+}
+.prueba1 {
+	top: 0px;
+}
 
 @media (min-width: 1280px) {
 	.btn-group .btn-success {

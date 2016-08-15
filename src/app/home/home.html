@@ -1,4 +1,4 @@
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" data-my-navscroll data-ng-class="{min:boolChangeClass}">
     <div class="content-inner">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -10,14 +10,13 @@
                     <span class="icon-bar"></span>
                 </button>
                 <ul class="nav navbar-nav">
-                    <li class="navbar-brand"><a href="#/home"><img src="assets/images/logo-santos.png" alt=""></a></li>
-                    <li class="navbar-brand second-brand"><a class="brand-border-left" href="#/home"><img src="assets/images/logo-corona.png" alt=""></a></li>
+                    <li class="navbar-brand" ng-class="{santos: boolChangeClass, prueba1: boolChangeClass}"><a href="#/home"><img src="assets/images/logo-santos.png" alt=""></a></li>
+                    <li class="navbar-brand second-brand"><a class="brand-border-left" ng-class="{corona: boolChangeClass, prueba: boolChangeClass}" href="#/home"><img src="assets/images/logo-corona.png" alt=""></a></li>
                 </ul>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="row collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav navbar-header navbar-right">
+                <ul class="nav navbar-nav navbar-header navbar-right" ng-class="{minNav:boolChangeClass}">
                     <li><a href="#/home">Inicio</a></li>
                     <li><a href="#">Beneficio del Club</a></li>
                     <li><a href="#">El Club Social</a></li>
