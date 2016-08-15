@@ -636,8 +636,12 @@ h3.carousel-home-title {
 	width: 50%;
 }
 .corona{
-	height: 78px;
-	margin-top: -30px;
+	height: 58px;
+	margin-top: -17px;
+}
+
+.coronaImg{
+	margin-top: -20px;
 }
 
 .prueba {
