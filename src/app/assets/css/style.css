@@ -199,6 +199,7 @@ h3.carousel-home-title {
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:visited {
     color: #FFFFFF;
     font-weight: 500;
+	transform: scale(1.1);
 }
 
 .navbar-brand {
@@ -611,6 +612,10 @@ h3.carousel-home-title {
 .social-login img {
 	text-align: center;
 	max-width: 40px;
+}
+
+.social-login img:hover{
+	transform: scale(1.1);
 }
 
 .team-logo img {
