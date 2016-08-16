@@ -29,8 +29,11 @@
          $authProvider.tokenPrefix = "corona";*/
 
         $authProvider.facebook({
-            clientId: '993747890714988',
-            redirectUri: 'http://localhost:3000/home'
+            clientId: '993747890714988'
+        });
+
+        $authProvider.google({
+            clientId: '9oxUEBTNPC36Zt5c0v8ZcYSRX'
         });
 
 
