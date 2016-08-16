@@ -31,7 +31,7 @@
 
         $authProvider.facebook({
             clientId: '993747890714988',
-            redirectUri: 'http://dev.corona.geekies.co/index.html#/home'
+            redirectUri: 'http://dev.corona.geekies.co/'
         });
 
         $authProvider.twitter({
