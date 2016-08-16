@@ -28,6 +28,11 @@
         /* $authProvider.tokenName = "token";
          $authProvider.tokenPrefix = "corona";*/
 
+        $authProvider.facebook({
+            clientId: '993747890714988',
+            redirectUri: 'http://localhost:3000/home'
+        });
+
 
     }
 

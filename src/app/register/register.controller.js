@@ -16,6 +16,11 @@
     vm.server = [];
     //  localStorage.removeItem('debug');
 
+
+      vm.authenticate = function(provider) {
+          $auth.authenticate(provider);
+      };
+
       vm.submitForm = function(form) {
       vm.submitted = true;
 
