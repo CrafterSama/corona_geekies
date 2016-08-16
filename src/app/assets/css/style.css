@@ -605,7 +605,7 @@ h3.carousel-home-title {
 }
 
 .social-buttons img {
-
+	width: 50px;
 }
 
 .social-login {
@@ -614,13 +614,13 @@ h3.carousel-home-title {
 }
 
 .social-login .social-buttons img {
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 7px;
+	margin-bottom: 7px;
 }
 
 .social-login img {
 	text-align: center;
-	width: 40px;
+	width: 50px;
 }
 
 .social-login img:hover{
@@ -870,6 +870,13 @@ h3.carousel-home-title {
 	}
 }
 
+@media (min-width: 322px) and (max-width: 460px) {
+	.overlay-slider {
+		top: 320px;
+	}
+}
+
+
 @media (min-width: 300px) and (max-width: 321px) {
 	h1.carousel-home-title {
 		font-size: 1.9em;
@@ -901,9 +908,8 @@ h3.carousel-home-title {
 	.carousel-inner {
 		min-height: 420px;
 	}
-
 	.overlay-slider {
-	    top: 230px;
+		top: 230px;
 	}
 	.box-item-1 img,
 	.box-item-2 img,
