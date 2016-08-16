@@ -600,7 +600,7 @@ h3.carousel-home-title {
 }
 
 .social-buttons img {
-
+	width: 50px;
 }
 
 .social-login {
@@ -609,13 +609,13 @@ h3.carousel-home-title {
 }
 
 .social-login .social-buttons img {
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 7px;
+	margin-bottom: 7px;
 }
 
 .social-login img {
 	text-align: center;
-	width: 40px;
+	width: 50px;
 }
 
 .team-logo img {
