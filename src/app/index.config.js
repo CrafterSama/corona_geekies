@@ -25,6 +25,7 @@
         $authProvider.loginUrl = "http://dev.corona.geekies.co:8000/accounts/login/";
         $authProvider.signupUrl = "http://dev.corona.geekies.co:8000/accounts/";
         $authProvider.tokenType = 'Token';
+        $authProvider.withCredentials = false;
         /* $authProvider.tokenName = "token";
          $authProvider.tokenPrefix = "corona";*/
 
@@ -32,8 +33,9 @@
             clientId: '993747890714988'
         });
 
-        $authProvider.google({
-            clientId: '9oxUEBTNPC36Zt5c0v8ZcYSRX'
+        $authProvider.twitter({
+            url: '/auth/twitter',
+            type: '1.0'
         });
 
 
