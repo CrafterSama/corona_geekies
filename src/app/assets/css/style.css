@@ -605,12 +605,13 @@ h3.carousel-home-title {
 }
 
 .social-buttons img {
-	width: 50px;
+	width: 5px;
 }
 
 .social-login {
 	border-left: 2px solid #fcb724;
-	margin-top: 50px;
+	/*margin-top: 5px;*/
+	margin-bottom: 20px;
 }
 
 .social-login .social-buttons img {

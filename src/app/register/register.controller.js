@@ -11,6 +11,7 @@
   /** @ngInject */
   function RegisterController($scope, $auth, $state, $http) {
     var vm = this;
+    vm.idGuerrero = false;
 
 
     vm.server = [];
@@ -41,6 +42,7 @@
         $auth.signup({
             username:   vm.user.alias,
             password:   vm.user.password,
+            city:       vm.user.ciudad,
             birthdate:  reversed,
             first_name: vm.user.firstname,
             last_name:  vm.user.lastname,
@@ -59,6 +61,10 @@
       }
 
     };
+
+    vm.registerGuerrero = function(){
+        vm.idGuerrero = !vm.idGuerrero;
+    }
 
   }
 })();
