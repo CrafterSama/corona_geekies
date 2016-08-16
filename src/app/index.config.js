@@ -30,12 +30,13 @@
          $authProvider.tokenPrefix = "corona";*/
 
         $authProvider.facebook({
-            clientId: '993747890714988'
+            clientId: '993747890714988',
+            redirectUri: 'http://dev.corona.geekies.co/index.html#/home'
         });
 
         $authProvider.twitter({
             url: '/auth/twitter',
-            type: '1.0'
+            responseType:'token'
         });
 
 
