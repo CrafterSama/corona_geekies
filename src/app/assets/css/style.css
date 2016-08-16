@@ -426,9 +426,13 @@ h3.carousel-home-title {
 }
 
 .register-form label {
-	text-align: left;
+	/*text-align: left;
 	text-transform:  uppercase;
-	font-weight: normal;
+	font-weight: normal;*/
+	text-align: left;
+	/* text-transform: uppercase; */
+	font-weight: bold;
+	font-size: 14px;
 }
 
 .score {
