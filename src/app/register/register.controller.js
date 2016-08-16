@@ -9,7 +9,7 @@
     .controller('RegisterController', RegisterController);
 
   /** @ngInject */
-  function RegisterController($scope, $auth, $state) {
+  function RegisterController($scope, $auth, $state, $http) {
     var vm = this;
 
 
@@ -20,6 +20,8 @@
       vm.authenticate = function(provider) {
           $auth.authenticate(provider);
       };
+
+
 
       vm.submitForm = function(form) {
       vm.submitted = true;
