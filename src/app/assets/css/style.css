@@ -750,15 +750,15 @@ h3.carousel-home-title {
 
 }
 
-@media (width: 992px) {
+@media (width: 800px) {
 	.container {
-	    width: 100%;
+	    width: 100% !important;
 	}
 }
 
 @media (width: 768px) {
 	.container {
-	    width: 100%;
+	    width: 100% !important;
 		padding-left: 0;
 	}
 	.navbar-right {
