@@ -669,6 +669,7 @@ h3.carousel-home-title {
 
 .terms {
 	color: white;
+	text-align: justify;
 }
 
 .conditions{
@@ -678,7 +679,7 @@ h3.carousel-home-title {
 }
 
 .promo-image1 {
-	background-image: url(../images/santos-team-large.jpg);
+	background-image: url(../images/background-tc.png);
 	-moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
@@ -973,6 +974,9 @@ h3.carousel-home-title {
 	.box-item-2 img,
 	.box-item-3 img {
 		height: 320px;
+	}
+	.terms-text{
+		margin-top: 137px;
 	}
 
 }
