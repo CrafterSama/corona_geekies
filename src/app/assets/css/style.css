@@ -680,11 +680,9 @@ h3.carousel-home-title {
 
 .promo-image1 {
 	background-image: url(../images/background-tc.png);
-	-moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-  	background-size: cover;
+
 	margin: 0;
+	width: 100%;
 }
 
 .terms_conditions {
@@ -702,6 +700,9 @@ h3.carousel-home-title {
 .message-alert{
 	color: white!important;
 	font-size: 13px!important;
+}
+.terms-text{
+	margin-right: 0!important;
 }
 
 @media (min-width: 1280px) {
