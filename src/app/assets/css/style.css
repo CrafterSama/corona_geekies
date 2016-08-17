@@ -670,7 +670,23 @@ h3.carousel-home-title {
 
 }
 
-@media(min-width: 769px) and (max-width: 992px) {
+@media (width: 992px) {
+	.container {
+	    width: 100%;
+	}
+}
+
+@media (width: 768px) {
+	.container {
+	    width: 100%;
+		padding-left: 0;
+	}
+	.navbar-right {
+		margin-top: 5%;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
 	.navbar-right {
 		margin-top: 5%;
 	}
