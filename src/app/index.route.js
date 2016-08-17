@@ -26,9 +26,9 @@
             templateUrl: 'app/main/main.html',
             controller: 'MainController',
             controllerAs: 'main',
-            resolve: {
+            /*resolve: {
               loginRequired: loginRequired
-            }
+          }*/
           })
           .state('login', {
             url: '/login',
@@ -52,7 +52,7 @@
             controller: 'HomeController',
             controllerAs: 'home'
           });
-  
+
       $urlRouterProvider.otherwise('/home');
 
   }
