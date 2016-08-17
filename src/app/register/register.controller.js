@@ -25,6 +25,7 @@
 
 
       vm.submitForm = function(form) {
+          console.log(form);
       vm.submitted = true;
 
       // check to make sure the form is completely valid
