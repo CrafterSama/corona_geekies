@@ -674,6 +674,9 @@ h3.carousel-home-title {
 	.container {
 	    width: 100% !important;
 	}
+	ul.nav.navbar-nav > li > a {
+		padding: 10px;
+	}
 }
 
 @media (width: 768px) {
@@ -682,6 +685,9 @@ h3.carousel-home-title {
 	}
 	.navbar-right {
 		margin-top: 5%;
+	}
+	ul.nav.navbar-nav > li > a {
+		padding: 10px;
 	}
 }
 
