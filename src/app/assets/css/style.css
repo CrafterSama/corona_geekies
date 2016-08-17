@@ -667,6 +667,42 @@ h3.carousel-home-title {
 	top: 0px;
 }
 
+.terms {
+	color: white;
+}
+
+.conditions{
+	color: white;
+	font-size: .7em;
+	text-align: justify;
+}
+
+.promo-image1 {
+	background-image: url(../images/santos-team-large.jpg);
+	-moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+  	background-size: cover;
+	margin: 0;
+}
+
+.terms_conditions {
+	text-decoration: none;
+	color: #FCB724;
+}
+
+.terms_conditions:hover {
+	color: #FCB724;
+}
+.terms_conditions:visited {
+	text-decoration: none;
+	color: #FCB724;
+}
+.message-alert{
+	color: white!important;
+	font-size: 13px!important;
+}
+
 @media (min-width: 1280px) {
 	.btn-group .btn-success {
 		padding: 10px 145px;

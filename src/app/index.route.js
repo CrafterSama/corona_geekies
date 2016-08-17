@@ -42,6 +42,10 @@
             controller: 'RegisterController',
             controllerAs: 'register'
           })
+          .state('terms', {
+              url: '/terms',
+              templateUrl: 'app/register/terms_conditions.html'
+          })
           .state('home', {
             url: '/home',
             templateUrl: 'app/home/home.html',
