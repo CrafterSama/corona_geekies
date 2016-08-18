@@ -405,7 +405,7 @@ h3.carousel-home-title {
 }
 
 .promo-image {
-	background-image: url(../images/santos-team-large.jpg);
+	background-image: url(../images/background-perfil.png);
   	/*-moz-background-size: cover;
   	-o-background-size: cover;
   	-webkit-background-size: cover;
@@ -415,7 +415,16 @@ h3.carousel-home-title {
   	margin: 0;
 }
 
-
+.promo-image2 {
+	background-image: url(../images/santos-team-large.jpg);
+	/*-moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+  background-size: cover;*/
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	margin: 0;
+}
 .register-form {
 	background-color: #008066;
 	display: block;
@@ -704,6 +713,12 @@ h3.carousel-home-title {
 .terms-text{
 	margin-right: 0!important;
 }
+.verify-text {
+	color: #FCB724;
+}
+.btn-miperfil{
+	margin-bottom: 30px;
+}
 
 @media (min-width: 1280px) {
 	.btn-group .btn-success {
@@ -970,6 +985,9 @@ h3.carousel-home-title {
 	}
 	.overlay-slider {
 		top: 230px;
+	}
+	.overlay-slider1 {
+		top: 0px!important;
 	}
 	.box-item-1 img,
 	.box-item-2 img,

@@ -18,11 +18,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="row collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-header navbar-right">
-                    <li><a href="#">Hola {{main.user.username}}</a></li>
+                    <li><a href="#">Inicio</a></li>
                     <li><a href="#">Beneficio del Club</a></li>
                     <li><a href="#">El Club Social</a></li>
-                    <li><a href="#">El Super Fan</a></li>
-                    <li><a href="#" ng-click="main.salir()">Salir</a></li>
                     <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/face-s.svg" alt="" /></a></li>
                     <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/google-s.svg" alt="" /></a></li>
                     <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/insta-s.svg" alt="" /></a></li>
@@ -445,100 +443,33 @@
         <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
 </div><!--/scores-carousel-->
+<div id="home-carousel" class="carousel">
+    <div class="row-fluid carousel-inner1">
+        <div class="item active">
+            <img class="hidden-sm hidden-md hidden-lg" alt="second slide" src="assets/images/registered.png" width="100%">
+            <img class="hidden-xs hidden-sm hidden-lg" alt="second slide" src="assets/images/registered.png" width="100%">
+            <img class="hidden-xs hidden-md hidden-lg" alt="second slide" src="assets/images/registered.png" width="100%">
+            <img class="hidden-xs hidden-sm hidden-md" alt="second slide" src="assets/images/registered.png" width="100%">
+            <div class="overlay-slider overlay-slider1">
+                <div class="container">
+                    <div class="carousel-caption">
+                       <img ng-src="assets/images/check.png" width="20%">
 
-<div class="row promo-image2">
-    <div class="overlay-promo">
-        <div class="container">
-            <div class="content-inner">
-
-            </div>
-        </div>
-    </div>
-    <div class="container-full profile-section">
-        <div class="row content-inner">
-            <div class="profile">
-                <div class="col-md-12">
-                    <div class="col-md-4 profile-image">
-                        <div class="col-md-12">
-                            <img class="img-responsive center-block" src="assets/images/profile-image-2.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="panel panel-waning">
-                            <div class="panel-heading">Perfil <span role="button" class="btn btn-success pull-right">editar</span></div>
-                            <div class="panel-body">
-                                <div class="col-md-6 col-sm-6">
-                                    <label for="profile-name">Nombre</label>
-                                    <div class="profile-name">{{main.user.first_name}}</div>
-                                    <label for="profile-city">Ciudad</label>
-                                    <div class="profile-city">{{main.user.city}}</div>
-                                    <label for="profile-social-buttons">Referir Contactos</label>
-                                    <div class="profile-social-buttons">
-                                        <a href="#"><img src="assets/images/face-s.svg" alt="" /></a>
-                                        <a href="#"><img src="assets/images/google-s.svg" alt="" /></a>
-                                        <a href="#"><img src="assets/images/insta-s.svg" alt="" /></a>
-                                        <a href="#"><img src="assets/images/twitter-s.svg" alt="" /></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6">
-                                    <label for="profile-lastname">Apellido</label>
-                                    <div class="profile-lastname">{{main.user.last_name}}</div>
-                                    <label for="profile-crowns">Mis Coronas</label>
-                                    <div class="profile-crowns">
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                            <img class="img-responsive center-block" src="assets/images/cup.jpg" alt="" />
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                            <img class="img-responsive center-block" src="assets/images/cup.jpg" alt="" />
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                            <img class="img-responsive center-block" src="assets/images/cup.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <label for="name">Etapa</label>
-                                    <div class="profile-progress">
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%">
-                                                Etapa 1
-                                                <span class="sr-only">Etapa 1 Completa</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
+
 </div>
-<div class="container box-items">
-    <div class="row">
-        <div class="col-md-12 items">
-            <div class="col-md-4">
-                <a class="text-center" href="">
-                    <img class="img-responsive center-block back-image" src="assets/images/btn-1.png" alt="">
-                    <span class="overlay-button-text"><h3>El Club <br />Social</h3></span>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a class="text-center" href="">
-                    <img class="img-responsive center-block back-image" src="assets/images/btn-2.png" alt="">
-                    <div class="overlay-button-image">
-                        <img src="assets/images/logo-sf.png" alt="" />
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a class="text-center" href="">
-                    <img class="img-responsive center-block back-image" src="assets/images/btn-3.png" alt="">
-                    <span class="overlay-button-text"><h3>Beneficios <br />del Club</h3></span>
-                </a>
-            </div>
+<div class="row terms-text">
+    <div class="container text-center verify-text">
+        <h1 class="carousel-home-title">Tu Registro ha sido<br /> Exitoso</h1>
+        <div class="btn-miperfil">
+            <button class="btn btn-success">Mi Perfil</button>
         </div>
     </div>
 </div>
-</div>
+
+

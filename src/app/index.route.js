@@ -25,10 +25,10 @@
             url: '/main',
             templateUrl: 'app/main/main.html',
             controller: 'MainController',
-            controllerAs: 'main',
+            controllerAs: 'main'/*,
             resolve: {
               loginRequired: loginRequired
-            }
+            }*/
           })
           .state('login', {
             url: '/login',
@@ -51,6 +51,12 @@
             templateUrl: 'app/home/home.html',
             controller: 'HomeController',
             controllerAs: 'home'
+          })
+          .state('/accounts/verify/', {
+              url: '/accouts/verify/:code',
+              templateUrl: 'app/verify/verify.html',
+              controller: 'VerifyController',
+              controllerAs: 'verify'
           });
 
       $urlRouterProvider.otherwise('/home');
