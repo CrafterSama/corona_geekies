@@ -840,13 +840,13 @@ h3.carousel-home-title {
 
 @media (width: 360px) {
 	.overlay-slider {
-    	top: 120px;
+    	top: 120px !important;
 	}
 	h1.carousel-home-title {
-    	font-size: 1.9em;
+    	font-size: 1.9em !important;
 	}
 	h3.carousel-home-title {
-    	font-size: 1.6em;
+    	font-size: 1.6em !important;
 	}
 
 }
