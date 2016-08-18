@@ -59,7 +59,7 @@
 
         };
 
-        $http.get('https://graph.facebook.com/me?fields=id,name,email?access_token='+localStorage.getItem("token_facebook")+'')
+        $http.get('https://graph.facebook.com/me?access_token='+localStorage.getItem("token_facebook")+'&fields=id,name,email')
             .then(function(result){
                 console.log(result.data);
 
