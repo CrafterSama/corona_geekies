@@ -65,7 +65,6 @@
         vm.user.ciudad = city;
         vm.user.last_name = result.data.last_name;
         vm.user.first_name = result.data.first_name;
-        pieces = result.data.birthday.split('/');
         vm.user.birthdate = pieces;
         vm.user.image_url = 'http://graph.facebook.com/'+result.data.id+'/picture?type=large';
       }, function(result){
