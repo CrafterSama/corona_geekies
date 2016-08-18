@@ -20,7 +20,22 @@
 
 
       vm.authenticate = function(provider) {
-          $auth.authenticate(provider);
+          $auth.authenticate(provider)
+            .then(function(response) {
+              localStorage.removeItem('satellizer_token');
+              localStorage.setItem("token_facebook", response.access_token);
+              $state.go('social_register');
+
+            })
+            .catch(function(error) {
+              if (error.message) {
+                toastr.error(error.message);
+              } else if (error.data) {
+                toastr.error(error.data.message, error.status);
+              } else {
+                toastr.error(error);
+              }
+            });
       };
 
 
