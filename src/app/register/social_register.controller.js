@@ -19,7 +19,7 @@
       // check to make sure the form is completely valid
       if (form.$valid) {
 
-          var date = vm.user.birthday;
+          var date = vm.user.birthdate;
           var pieces = date.split('-');
           pieces.reverse();
           var reversed = pieces.join('-');
@@ -33,8 +33,8 @@
             password:   vm.user.password,
             city:       vm.user.ciudad,
             birthdate:  reversed,
-            first_name: vm.user.firstname,
-            last_name:  vm.user.lastname,
+            first_name: vm.user.first_name,
+            last_name:  vm.user.last_name,
             telephone:  phone,
             email:      vm.user.email
           })
@@ -58,10 +58,10 @@
         vm.user = {};
         vm.user.email = result.data.email;
         vm.user.ciudad = result.data.hometown.name;
-        vm.user.lastname = result.data.last_name;
-        vm.user.firstname = result.data.first_name;
+        vm.user.last_name = result.data.last_name;
+        vm.user.first_name = result.data.first_name;
         var pieces = result.data.birthday.split('/');
-        vm.user.birthday = pieces.join('-');
+        vm.user.birthdate = pieces.join('-');
         vm.user.image_url = 'http://graph.facebook.com/'+result.data.id+'/picture?type=large';
       }, function(result){
         console.log(result)

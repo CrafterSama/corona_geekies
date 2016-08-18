@@ -46,7 +46,7 @@
                             <div class="col-lg-12">
                                 <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.firstname.$invalid || social_register.server.first_name) && social_register.submitted }">
                                     <label for="firstname">Nombre *</label>
-                                    <input type="text" name="firstname" class="form-control" placeholder="Nombre" ng-model="social_register.user.firstname" ng-pattern="/^[a-zA-Z ]{1,25}$/" ng-minlength="3" ng-maxlength="15" required>
+                                    <input type="text" name="firstname" class="form-control" placeholder="Nombre" ng-model="social_register.user.first_name" ng-pattern="/^[a-zA-Z ]{1,25}$/" ng-minlength="3" ng-maxlength="15" required>
                                     <p ng-show="userForm.firstname.$invalid && social_register.submitted && social_register.submitted" class="message-alert"><b>* Requerido.</b></p>
                                     <p  ng-show="userForm.firstname.$error.minlength && social_register.submitted" class="message-alert"><b>* Minimo 3 Caracteres.</b></p>
                                     <p  ng-show="userForm.firstname.$error.maxlength && social_register.submitted" class="message-alert"><b>* Maximo 15 Caracteres.</b></p>
@@ -57,7 +57,7 @@
                                 </div>
                                 <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.password.$invalid || social_register.server.last_name) && social_register.submitted }">
                                     <label for="lastname">Apellido *</label>
-                                    <input type="text" name="lastname" class="form-control" ng-model="social_register.user.lastname" ng-pattern="/^[a-zA-Z ]{1,25}$/" ng-minlength="3" ng-maxlength="15" placeholder="Apellido" required>
+                                    <input type="text" name="lastname" class="form-control" ng-model="social_register.user.last_name" ng-pattern="/^[a-zA-Z ]{1,25}$/" ng-minlength="3" ng-maxlength="15" placeholder="Apellido" required>
                                     <p  ng-show="userForm.lastname.$invalid && social_register.submitted" class="message-alert"><b>* Requerido.</b></p>
                                     <p  ng-show="userForm.lastname.$error.minlength && social_register.submitted" class="message-alert"><b>* Minimo 3 Caracteres.</b></p>
                                     <p  ng-show="userForm.lastname.$error.maxlength && social_register.submitted" class="message-alert"><b>* Maximo 15 Caracteres.</b></p>
@@ -86,9 +86,9 @@
                                 </div>
                             </div>
                             <div class="col-lg-12">
-                                <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.ciudad.$invalid || social_register.server.ciudad) && social_register.submitted}">
+                                <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.ciudad.$invalid || social_register.server.city) && social_register.submitted}">
                                     <label for="alias">Ciudad *</label>
-                                    <input type="text" name="ciudad" class="form-control" placeholder="Ciudad" data-ng-pattern="/^(\D)+$/" ng-maxlength="25" ng-model="social_register.user.ciudad" required>
+                                    <input type="text" name="ciudad" class="form-control" placeholder="Ciudad" data-ng-pattern="/^(\D)+$/" ng-maxlength="25" ng-model="social_register.user.city" required>
                                     <p ng-show="userForm.ciudad.$invalid && social_register.submitted" class="message-alert"><b>* Requerido.</b></p>
                                     <p ng-show="userForm.ciudad.$error.maxlength && social_register.submitted" class="message-alert"><b>* Maximo 25 Caracteres.</b></p>
                                     <p class="help-block message-alert"
@@ -112,7 +112,7 @@
                             <div class="col-lg-12">
                                 <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.birthday.$invalid || social_register.server.birhtdate)  && social_register.submitted  }">
                                     <label for="birthday">Fecha de Nacimiento *</label>
-                                    <input type="text" name="birthday" class="form-control" ng-model="social_register.user.birthday" mask='99-99-9999' placeholder="Ej: 31-12-1981" required>
+                                    <input type="text" name="birthday" class="form-control" ng-model="social_register.user.birhtdate" mask='99-99-9999' placeholder="Ej: 31-12-1981" required>
                                     <p  ng-show="userForm.birthday.$invalid && social_register.submitted" class="message-alert"><b>* Requerido.</b></p>
                                     <p  class="help-block message-alert"
                                        data-ng-show="social_register.server.birhtdate && social_register.submitted"
