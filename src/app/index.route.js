@@ -42,6 +42,12 @@
             controller: 'RegisterController',
             controllerAs: 'register'
           })
+          .state('social_register', {
+            url: '/social_register',
+            templateUrl: 'app/register/social_register.html',
+            controller: 'SocialRegisterController',
+            controllerAs: 'social_register'
+          })
           .state('terms', {
               url: '/terms',
               templateUrl: 'app/register/terms_conditions.html'

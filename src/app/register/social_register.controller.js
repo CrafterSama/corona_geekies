@@ -6,41 +6,14 @@
 
   angular
     .module('appCorona')
-    .controller('RegisterController', RegisterController);
+    .controller('SocialRegisterController', SocialRegisterController);
 
   /** @ngInject */
-  function RegisterController($scope, $auth, $state, $http, toastr) {
+  function SocialRegisterController($scope, $auth, $state, $http, toastr) {
     var vm = this;
-    vm.idGuerrero = false;
-
-
     vm.server = [];
-    //  localStorage.removeItem('debug');
-
-
-      vm.authenticate = function(provider) {
-          $auth.authenticate(provider)
-            .then(function(response) {
-              localStorage.removeItem('satellizer_token');
-              localStorage.setItem("token_facebook", response.access_token);
-              $state.go('social_register');
-
-            })
-            .catch(function(error) {
-              if (error.message) {
-                toastr.error(error.message);
-              } else if (error.data) {
-                toastr.error(error.data.message, error.status);
-              } else {
-                toastr.error(error);
-              }
-            });
-      };
-
-
-
-      vm.submitForm = function(form) {
-          console.log(form);
+    vm.submitForm = function(form) {
+      console.log(form);
       vm.submitted = true;
 
       // check to make sure the form is completely valid
@@ -78,9 +51,21 @@
 
     };
 
-    vm.registerGuerrero = function(){
-        vm.idGuerrero = !vm.idGuerrero;
-    }
+    $http.get(
+      'https://graph.facebook.com/me?access_token='+localStorage.getItem("token_facebook")+'')
+      .then(function(result){
+        console.log(result.data)
+        vm.user = {};
+        vm.user.email = result.data.email;
+        vm.user.ciudad = result.data.hometown.name;
+        vm.user.lastname = result.data.last_name;
+        vm.user.firstname = result.data.first_name;
+        var pieces = result.data.birthday.split('/');
+        vm.user.birthday = pieces.join('-');
+        vm.user.image_url = 'http://graph.facebook.com/'+result.data.id+'/picture?type=large';
+      }, function(result){
+        console.log(result)
+      });
 
   }
 })();
