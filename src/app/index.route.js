@@ -25,10 +25,10 @@
             url: '/main',
             templateUrl: 'app/main/main.html',
             controller: 'MainController',
-            controllerAs: 'main',
+            controllerAs: 'main'/*,
             resolve: {
               loginRequired: loginRequired
-            }
+            }*/
           })
           .state('login', {
             url: '/login',

@@ -460,7 +460,7 @@
                 <div class="col-md-12">
                     <div class="col-md-4 profile-image">
                         <div class="col-md-12">
-                            <img class="img-responsive center-block" src="assets/images/profile-image-2.jpg" alt="">
+                            <img class="img-responsive center-block" src="assets/images/imagen-ranking.png" alt="" width="">
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -468,40 +468,44 @@
                             <div class="panel-heading">Perfil <span role="button" class="btn btn-success pull-right">editar</span></div>
                             <div class="panel-body">
                                 <div class="col-md-6 col-sm-6">
-                                    <label for="profile-name">Nombre</label>
-                                    <div class="profile-name">{{main.user.first_name}}</div>
-                                    <label for="profile-city">Ciudad</label>
-                                    <div class="profile-city">{{main.user.city}}</div>
-                                    <label for="profile-social-buttons">Referir Contactos</label>
+                                    <label for="color-perfil" class="color-perfil">Nombre</label>
+                                    <div class="verify-text-perfil">{{main.user.first_name}}</div>
+                                    <label for="color-perfil" class="color-perfil">Ciudad</label>
+                                    <div class="verify-text-perfil">{{main.user.city}}</div>
+                                    <label for="profile-social-buttons verify-text" class="color-perfil">Referir Contactos</label>
                                     <div class="profile-social-buttons">
-                                        <a href="#"><img src="assets/images/face-s.svg" alt="" /></a>
-                                        <a href="#"><img src="assets/images/google-s.svg" alt="" /></a>
-                                        <a href="#"><img src="assets/images/insta-s.svg" alt="" /></a>
-                                        <a href="#"><img src="assets/images/twitter-s.svg" alt="" /></a>
+                                        <a href="#"><img src="assets/images/face-s-a.svg" alt="" /></a>
+                                        <a href="#"><img src="assets/images/google-s-a.svg" alt="" /></a>
+                                        <a href="#"><img src="assets/images/insta-s-a.svg" alt="" /></a>
+                                        <a href="#"><img src="assets/images/twitter-s-a.svg" alt="" /></a>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6">
-                                    <label for="profile-lastname">Apellido</label>
-                                    <div class="profile-lastname">{{main.user.last_name}}</div>
-                                    <label for="profile-crowns">Mis Coronas</label>
+                                    <label for="profile-lastname verify-text" class="color-perfil">Apellido</label>
+                                    <div class="verify-text-perfil">{{main.user.last_name}}</div>
+                                    <label for="profile-crowns verify-text" class="color-perfil">Mis Coronas</label>
                                     <div class="profile-crowns">
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                            <img class="img-responsive center-block" src="assets/images/cup.jpg" alt="" />
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                            <img class="img-responsive center-block" src="assets/images/cup.jpg" alt="" />
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                            <img class="img-responsive center-block" src="assets/images/cup.jpg" alt="" />
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                <label for="profile-crowns" class="verify-text-perfil">Historicas</label>
+                                                <div class="">
+                                                    <img class="img-responsive center-block" src="assets/images/cup.png" alt="" />
+                                                </div>                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                <label for="profile-crowns" class="verify-text-perfil">Disponibles</label>
+                                                <div class="">
+                                                    <img class="img-responsive center-block" src="assets/images/cup.png" alt="" />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12">
-                                    <label for="name">Etapa</label>
+                                    <label for="name" class="color-perfil">Clasificación</label>
                                     <div class="profile-progress">
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%">
-                                                Etapa 1
+                                                Bronce
                                                 <span class="sr-only">Etapa 1 Completa</span>
                                             </div>
                                         </div>
