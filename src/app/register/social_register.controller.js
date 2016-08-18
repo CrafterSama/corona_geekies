@@ -51,6 +51,9 @@
 
     };
 
+
+
+
     $http.get(
       'https://graph.facebook.com/me?access_token='+localStorage.getItem("token_facebook")+'')
       .then(function(result){
@@ -71,5 +74,11 @@
         console.log(result)
       });
 
+      $http.get('graph.facebook.com/v2.2/me')
+          .then(function(result){
+              console.log(result);
+          }, function(result){
+
+          });
   }
 })();
