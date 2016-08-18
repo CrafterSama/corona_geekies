@@ -12,7 +12,7 @@
     function SocialRegisterController($scope, $auth, $state, $http, toastr) {
         var vm = this;
         vm.server = [];
-        
+
         vm.submitForm = function(form) {
             console.log(form);
             vm.submitted = true;
@@ -52,8 +52,7 @@
 
         };
 
-        $http.get('https://graph.facebook.com/me?access_token='+localStorage.getItem("token_facebook")+'&fields=id,first_name,' +
-                  'last_name,email,birthday,hometown,locale')
+        $http.get('https://graph.facebook.com/me?access_token=EAACEdEose0cBABZB46NASfFJce1DTHeYqJGE1lHKUIpLFZB2wmCHoyrQMRNq0vee2AfjSntfmXpU5jZBXqCFxNwWpfsOLaPbMnXl3iQnV4g9hZBUZB7yiEpBxNeLJYKERkWYv3EJZBPCyiVLVedb1aGW6pBHtP64ZAL2pBF4ANjrgZDZD&fields=id,first_name,last_name,email,birthday,hometown,locale')
             .then(function(result){
                 console.log(result.data);
 
