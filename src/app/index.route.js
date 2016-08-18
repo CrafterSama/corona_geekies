@@ -53,7 +53,7 @@
             controllerAs: 'home'
           })
           .state('/accounts/verify/', {
-              url: '/accouts/verify/:code',
+              url: '/accounts/verify/:code',
               templateUrl: 'app/verify/verify.html',
               controller: 'VerifyController',
               controllerAs: 'verify'
