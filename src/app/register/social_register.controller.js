@@ -55,8 +55,9 @@
       'https://graph.facebook.com/me?access_token='+localStorage.getItem("token_facebook")+'')
       .then(function(result){
           var city = "";
-
+          var pieces = "";
           if(result.data.hometown !== undefined){city = result.data.hometown.name}else{ city = "";}
+          if(result.data.birthday !== undefined){var pieces = result.data.birthday.split('/'); pieces.join('-') }else{ pieces = "";}
 
         console.log(result.data)
         vm.user = {};
@@ -64,8 +65,8 @@
         vm.user.ciudad = city;
         vm.user.last_name = result.data.last_name;
         vm.user.first_name = result.data.first_name;
-        var pieces = result.data.birthday.split('/');
-        vm.user.birthdate = pieces.join('-');
+        pieces = result.data.birthday.split('/');
+        vm.user.birthdate = pieces;
         vm.user.image_url = 'http://graph.facebook.com/'+result.data.id+'/picture?type=large';
       }, function(result){
         console.log(result)
