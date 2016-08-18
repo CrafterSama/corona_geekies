@@ -56,7 +56,7 @@
       .then(function(result){
           var city = "";
 
-          if(result.data.hometown.name !== undefined){city = result.data.hometown.name}else{ city = "";}
+          if(result.data.hometown !== undefined){city = result.data.hometown.name}else{ city = "";}
 
         console.log(result.data)
         vm.user = {};
