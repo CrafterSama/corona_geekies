@@ -138,6 +138,16 @@ h3.carousel-home-title {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+.first-brand {
+    float: left;
+    height: 100%;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.first-logo {
+	max-height: 75px;
+}
 
 .form-control {
 	border-radius: 0;
@@ -178,6 +188,7 @@ h3.carousel-home-title {
 	padding-left: 10px;
 }
 
+
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fcb724;
 }
@@ -188,7 +199,7 @@ h3.carousel-home-title {
     border:  none;
     border-radius: 0;
     margin-bottom: 0;
-    /*box-sizing: border-box;*/
+    padding: 35px 0px 25px 0px;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -201,7 +212,7 @@ h3.carousel-home-title {
     font-weight: 500;
 }
 
-.navbar-brand {
+/*.navbar-brand {
     float: left;
     height: 100%;
     padding: 0px 0px;
@@ -215,7 +226,7 @@ h3.carousel-home-title {
 
 .navbar-right {
 	margin-top: 4%;
-}
+}*/
 
 .navbar-toggle {
     margin: 40px 20px 8px -30px;
@@ -228,6 +239,15 @@ h3.carousel-home-title {
 }
 .navbar-default .navbar-toggle:hover .icon-bar {
     background-color: #008066;
+}
+
+.navbar-header.logo {
+    margin-top: -10px;
+}
+
+.navbar-nav > li > a.first-brand,
+.navbar-nav > li > a.second-brand {
+	padding: 0px 10px;
 }
 
 .overlay-button-image,
@@ -446,14 +466,6 @@ h3.carousel-home-title {
 	padding: 0 15px;
 }
 
-.second-brand {
-    float: left;
-    height: 100%;
-    padding: 25px 0px;
-    font-size: 18px;
-    line-height: 20px;
-}
-
 .scores-carousel {
     position: relative;
 }
@@ -589,6 +601,16 @@ h3.carousel-home-title {
 	border-right: none;
 }
 
+.second-brand {
+    float: left;
+    height: 100%;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.second-logo {
+	max-height: 35px;
+}
 
 .social-buttons {
     max-width: 50px;
@@ -683,18 +705,18 @@ h3.carousel-home-title {
 	.container {
 		padding-left: 0;
 	}
-	.navbar-right {
+/*	.navbar-right {
 		margin-top: 5%;
-	}
+	}*/
 	ul.nav.navbar-nav > li > a {
 		padding: 10px;
 	}
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-	.navbar-right {
+/*	.navbar-right {
 		margin-top: 5%;
-	}
+	}*/
 
 	.btn-group .btn-success {
 		    padding: 10px 120px;
@@ -836,19 +858,6 @@ h3.carousel-home-title {
 	.btn-group .btn-warning {
 		padding: 10px 40px;
 	}
-}
-
-@media (width: 360px) {
-	.overlay-slider {
-    	top: 120px;
-	}
-	h1.carousel-home-title {
-    	font-size: 1.9em;
-	}
-	h3.carousel-home-title {
-    	font-size: 1.6em;
-	}
-
 }
 
 @media (min-width: 322px) and (max-width: 401px) {
