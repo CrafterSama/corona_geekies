@@ -62,8 +62,7 @@
 
 
 
-        $http.get(
-                'https://graph.facebook.com/me?access_token='+localStorage.getItem("token_facebook")+'')
+        $http.get('https://graph.facebook.com/bgolub?fields=id,name,picture?access_token='+localStorage.getItem("token_facebook")+'')
             .then(function(result){
                 var city = "";
                 var pieces = "";
@@ -82,11 +81,5 @@
                 console.log(result)
             });
 
-        $http.get('https://graph.facebook.com/me?fields=id,name,birthday?access_token='+localStorage.getItem("token_facebook")+'')
-            .then(function(result){
-                console.log(result);
-            }, function(result){
-
-            });
     }
 })();
