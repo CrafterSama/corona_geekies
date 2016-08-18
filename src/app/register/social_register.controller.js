@@ -54,10 +54,14 @@
     $http.get(
       'https://graph.facebook.com/me?access_token='+localStorage.getItem("token_facebook")+'')
       .then(function(result){
+          var city = "";
+
+          if(result.data.hometown.name !== undefined){city = result.data.hometown.name}else{ city = "";}
+
         console.log(result.data)
         vm.user = {};
         vm.user.email = result.data.email;
-        vm.user.ciudad = result.data.hometown.name;
+        vm.user.ciudad = city;
         vm.user.last_name = result.data.last_name;
         vm.user.first_name = result.data.first_name;
         var pieces = result.data.birthday.split('/');
