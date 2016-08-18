@@ -31,7 +31,7 @@
         $auth.signup({
             username:   vm.user.alias,
             password:   vm.user.password,
-            city:       vm.user.ciudad,
+            city:       vm.user.city,
             birthdate:  reversed,
             first_name: vm.user.first_name,
             last_name:  vm.user.last_name,
@@ -59,7 +59,7 @@
           if(result.data.hometown !== undefined){city = result.data.hometown.name}else{ city = "";}
           if(result.data.birthday !== undefined){var pieces = result.data.birthday.split('/'); pieces.join('-') }else{ pieces = "";}
 
-        console.log(result.data)
+        console.log(result.data);
         vm.user = {};
         vm.user.email = result.data.email;
         vm.user.ciudad = city;
