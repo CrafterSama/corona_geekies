@@ -12,14 +12,7 @@
     function SocialRegisterController($scope, $auth, $state, $http, toastr) {
         var vm = this;
         vm.server = [];
-
-        $http.get('http://graph.facebook.com/v2.2/me')
-            .then(function(result){
-                console.log(result);
-            }, function(result){
-
-            });
-
+        
         vm.submitForm = function(form) {
             console.log(form);
             vm.submitted = true;
