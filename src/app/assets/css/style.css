@@ -752,14 +752,16 @@ ul.nav.navbar-nav.box>li>a {
 	text-transform: uppercase;
 	font-weight: bold;
 }
-.datepickerdemoBasicUsage {
-	/** Demo styles for mdCalendar. */ }
-.datepickerdemoBasicUsage md-content {
-	padding-bottom: 200px; }
-.datepickerdemoBasicUsage .validation-messages {
-	font-size: 12px;
-	color: #dd2c00;
-	margin-left: 15px; }
+.full button span {
+	background-color: limegreen;
+	border-radius: 32px;
+	color: black;
+}
+.partially button span {
+	background-color: orange;
+	border-radius: 32px;
+	color: black;
+}
 
 @media (min-width: 1280px) {
 	.btn-group .btn-success {

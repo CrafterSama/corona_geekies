@@ -203,7 +203,7 @@
         function disabled(data) {
             var date = data.date,
                 mode = data.mode;
-            return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
+            return mode === 'day' && (date.getDay() === 1 || date.getDay() === 7);
         }
 
         $scope.toggleMin = function() {
