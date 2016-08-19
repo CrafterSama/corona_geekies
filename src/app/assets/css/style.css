@@ -916,10 +916,10 @@ ul.nav.navbar-nav.box>li>a {
 		font-size: 1.6em;
 	}
 	.btn-group .btn-success {
-    	padding: 10px 10px;
+    	padding: 10px 18px;
 	}
 	.btn-group .btn-warning {
-		padding: 10px 10px;
+		padding: 10px 18px;
 	}
 
 	.login-form .col-md-6,
