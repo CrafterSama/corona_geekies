@@ -167,9 +167,9 @@ ul.nav.navbar-nav.box>li>a {
 }
 
 .footer {
-	background: #008066;
-	padding: 15px;
-	color: #fff;
+    background: #008066;
+    padding: 5px 15px;
+    color: #fff;
 }
 
 .hide {
