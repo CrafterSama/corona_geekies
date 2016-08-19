@@ -13,9 +13,8 @@
         var vm = this;
         vm.idGuerrero = false;
         vm.user = {};
-
-
         vm.server = [];
+
         if($location.$$search.referral_code !== undefined){
 
             var referral_code = $location.$$search.referral_code;
@@ -26,6 +25,7 @@
         vm.authenticate = function(provider) {
             $auth.authenticate(provider)
                 .then(function(response) {
+                    console.log(response);
                     localStorage.removeItem('satellizer_token');
                     localStorage.setItem("token_facebook", response.access_token);
                     $state.go('social_register');

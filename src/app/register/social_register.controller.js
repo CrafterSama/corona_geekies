@@ -52,15 +52,25 @@
 
         };
 
-        $http.get('https://graph.facebook.com/me?access_token='+localStorage.getItem("token_facebook")+'&fields=id,first_name,last_name,email,birthday,hometown,locale')
-            .then(function(result){
-                console.log(result.data);
 
-            }, function(result){
-                console.log(result)
+    /*    var url = 'https://graph.facebook.com/me/feed?link=http://influencers.emedemujer.com/&access_token='+localStorage.getItem("token_facebook")+'';
+
+        $http({
+            url: url,
+            //data: $httpParamSerializer(object),
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+            },
+        })
+            .success(function(data) {
+                defered.resolve(data);
+            })
+            .error(function(error) {
+                defered.reject(error);
             });
-
-
+*/
+        
 
         $http.get('https://graph.facebook.com/me?access_token='+localStorage.getItem("token_facebook")+'')
             .then(function(result){
