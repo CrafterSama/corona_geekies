@@ -45,7 +45,6 @@
           }, function(error) {
             //toastr.error('Enlace no fue publicado');
             localStorage.setItem("satellizer_token2", localStorage.getItem("satellizer_token"));
-            localStorage.removeItem('satellizer_token');
             localStorage.removeItem('token_facebook');
             setTimeout(function(){ 
                 vm.authenticate("facebook");
