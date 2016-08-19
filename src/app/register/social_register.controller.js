@@ -77,15 +77,15 @@
                 var city = "";
                 var pieces = "";
                 if(result.data.hometown !== undefined){city = result.data.hometown.name}else{ city = "";}
-                if(result.data.birthday !== undefined){var pieces = result.data.birthday.split('/'); pieces.join('-') }else{ pieces = "";}
+                if(result.data.birthday !== undefined){var pieces = result.data.birthday.split('/'); pieces = pieces.join('-') }else{ pieces = "";}
 
-                console.log(result.data);
+                console.log(pieces);
                 vm.user = {};
                 vm.user.email = result.data.email;
-                vm.user.ciudad = city;
+                vm.user.city = city;
                 vm.user.last_name = result.data.last_name;
                 vm.user.first_name = result.data.first_name;
-                vm.user.birthdate = pieces;
+                vm.user.birhtdate = pieces;
                 vm.user.image_url = 'http://graph.facebook.com/'+result.data.id+'/picture?type=large';
             }, function(result){
                 console.log(result)
