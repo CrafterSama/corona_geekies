@@ -47,7 +47,7 @@
             localStorage.removeItem('token_facebook');
             setTimeout(function(){ 
                 vm.authenticate("facebook");
-            }, 3000);
+            }, 1000);
           });
 
     };
