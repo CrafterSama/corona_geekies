@@ -65,7 +65,7 @@
                     $http({
                         method: 'PUT',
                         url: 'http://dev.corona.geekies.co:8000/accounts/' + vm.user.id +'/',
-                        data: {"birthdate": reversed, "last_name": vm.user.last_name,
+                        data: {"birthdate": reversed, "last_name": vm.user.last_name, "city": vm.user.city,
                             "first_name": vm.user.first_name, "username": vm.user.username,
                             "password": vm.user.password, "telephone": phone, "email": vm.user.email,
                             "id_guerrero": vm.user.id_guerrero},

@@ -19,14 +19,21 @@
 
             // check to make sure the form is completely valid
             if (form.$valid) {
+
+                var date = vm.user.birhtdate;
+                var pieces = date.split('-');
+                pieces.reverse();
+                var reversed = pieces.join('-');
+
                 var phone = vm.user.phone_cel.replace(/[.*+?^${}()|[\]\\-]/g, "");
                 phone = phone.replace(' ', '');
+
 
                 $auth.signup({
                         username:   vm.user.alias,
                         password:   vm.user.password,
                         city:       vm.user.city,
-                        birthdate:  vm.user.birhtdate,
+                        birthdate:  reversed,
                         first_name: vm.user.first_name,
                         last_name:  vm.user.last_name,
                         telephone:  phone,
