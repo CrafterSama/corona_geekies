@@ -644,7 +644,7 @@ ul.nav.navbar-nav.box>li>a {
 }
 
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
 	.btn-group .btn-success {
 		padding: 10px 145px;
 	}
@@ -713,16 +713,19 @@ ul.nav.navbar-nav.box>li>a {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-
 	.navbar-right>li>a {
-	    padding: 10px 15px 0px 0px !important;
+		padding: 10px 15px 0px 0px !important;
 	}
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+
 	.btn-group .btn-success {
-		    padding: 10px 120px;
+		    padding: 10px 125px;
 	}
 
 	.btn-group .btn-warning {
-		    padding: 10px 120px;
+		    padding: 10px 125px;
 	}
 }
 
