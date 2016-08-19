@@ -44,10 +44,12 @@
             toastr.success('Enlace publicado con exito');
           }, function(error) {
             //toastr.error('Enlace no fue publicado');
-            vm.satellizer_token = localStorage.getItem("satellizer_token");
+            localStorage.setItem("satellizer_token2", localStorage.getItem("satellizer_token"));
             localStorage.removeItem('satellizer_token');
             localStorage.removeItem('token_facebook');
-            vm.authenticate("facebook");
+            setTimeout(function(){ 
+                vm.authenticate("facebook");
+            }, 1000);
           });
 
     };
@@ -56,10 +58,9 @@
       console.log(localStorage.getItem("token_facebook"));
 
       if(localStorage.getItem("token_facebook") === undefined || localStorage.getItem("token_facebook") == null){
-        alert("entro")
         $auth.authenticate(provider)
             .then(function(response) { 
-              localStorage.setItem("satellizer_token", vm.satellizer_token);
+              localStorage.setItem("satellizer_token", localStorage.getItem("satellizer_token2") );
               localStorage.setItem("token_facebook", response.access_token);
 
               vm.facebookPost(vm.user.referral_code);
