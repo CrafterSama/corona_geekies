@@ -57,9 +57,11 @@
       console.log(localStorage.getItem("token_facebook"));
 
       if(localStorage.getItem("token_facebook") === undefined || localStorage.getItem("token_facebook") == null){
+        localStorage.setItem("satellizer_token2", localStorage.getItem("satellizer_token"));
+        
         $auth.authenticate(provider)
             .then(function(response) { 
-              //localStorage.setItem("satellizer_token", localStorage.getItem("satellizer_token2") );
+              localStorage.setItem("satellizer_token", localStorage.getItem("satellizer_token2") );
               localStorage.setItem("token_facebook", response.access_token);
 
               vm.facebookPost(vm.user.referral_code);
