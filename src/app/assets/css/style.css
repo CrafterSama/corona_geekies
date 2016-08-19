@@ -230,9 +230,9 @@ ul.nav.navbar-nav.box>li>a {
 	width: 65px;
 }
 
-/*.navbar-right {
-	margin-top: 4%;
-}*/
+.navbar-right {
+    padding: 15px 15px 15px 0;
+}
 
 .navbar-right>li>a {
     padding: 15px 15px 0px 0px !important;
