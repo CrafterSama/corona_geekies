@@ -34,7 +34,7 @@
 
 
     vm.facebookPost = function(id){
-      var url = 'https://graph.facebook.com/me/feed?link=http://dev.corona.geekies.co:8000/#/register?referreal_code='+id+'&access_token='+localStorage.getItem("token_facebook")+'';
+      var url = 'https://graph.facebook.com/me/feed?link=http://dev.corona.geekies.co/#/register?referreal_code='+id+'&access_token='+localStorage.getItem("token_facebook")+'';
 
       $http({
         url: url,
