@@ -40,7 +40,7 @@
 <div class="row promo-image">
     <div class="overlay-promo">
         <div class="container">
-            <h3 class="promo-home-title">Registrate, Juega y Gana</h3>
+            <h1 class="promo-home-title">Registrate, Juega y Gana</h1>
 
             <div class="row action-buttons">
                 <div class="btn-group justified sign-buttons" role="group" aria-label="...">
@@ -128,7 +128,9 @@
                                 <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.birthdate.$invalid || register.server.birthdate)  && register.submitted  }">
                                     <label for="birthday">Fecha de Nacimiento *</label>
                                     <p class="input-group">
-                                      <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                      <input type="text" name="birthdate" class="form-control" uib-datepicker-popup="{{format}}" ng-model="register.user.birthdate"
+                                             is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close"
+                                             alt-input-formats="altInputFormats" />
                                       <span class="input-group-btn">
                                         <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
                                       </span>

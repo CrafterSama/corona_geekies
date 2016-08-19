@@ -9,7 +9,7 @@
         .controller('RegisterController', RegisterController);
 
     /** @ngInject */
-    function RegisterController($scope, $auth, $state, $http, toastr, $location) {
+    function RegisterController($scope, $auth, $state, $http, toastr, $location, $filter) {
         var vm = this;
         vm.idGuerrero = false;
         vm.user = {};
@@ -46,7 +46,7 @@
 
 
         vm.submitForm = function(form) {
-            console.log(form);
+
             vm.submitted = true;
             console.log(vm.user);
             // check to make sure the form is completely valid
@@ -55,9 +55,7 @@
                 if(vm.user.id){
 
                     var date = vm.user.birthdate;
-                    var pieces = date.split('-');
-                    pieces.reverse();
-                    var reversed = pieces.join('-');
+                    var reversed = $filter('date')(date, "yyyy-MM-dd");
 
                     var phone = vm.user.telephone.replace(/[.*+?^${}()|[\]\\-]/g, "");
                     phone = phone.replace(' ', '');
@@ -86,9 +84,7 @@
                 }else{
 
                     var date = vm.user.birthdate;
-                    var pieces = date.split('-');
-                    pieces.reverse();
-                    var reversed = pieces.join('-');
+                    var reversed = $filter('date')(date, "yyyy-MM-dd");
 
                     var phone = vm.user.telephone.replace(/[.*+?^${}()|[\]\\-]/g, "");
                     phone = phone.replace(' ', '');
@@ -174,15 +170,14 @@
             return day === 0 || day === 6;
         };
 
-
-
         $scope.today = function() {
-            $scope.dt = new Date();
+            vm.user.birthdate = new Date();
         };
+
         $scope.today();
 
         $scope.clear = function() {
-            $scope.dt = null;
+            vm.user.birthdate = null;
         };
 
         $scope.inlineOptions = {
@@ -203,7 +198,7 @@
         function disabled(data) {
             var date = data.date,
                 mode = data.mode;
-            return mode === 'day' && (date.getDay() === 1 || date.getDay() === 7);
+            return mode === 'day' && (date.getDay() === -1 || date.getDay() === 7);
         }
 
         $scope.toggleMin = function() {
@@ -222,11 +217,11 @@
         };
 
         $scope.setDate = function(year, month, day) {
-            $scope.dt = new Date(year, month, day);
+            vm.user.birthdate= new Date(year, month, day);
         };
 
-        $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-        $scope.format = $scope.formats[0];
+        $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate', 'dd/MM/yyyy'];
+        $scope.format = $scope.formats[4];
         $scope.altInputFormats = ['M!/d!/yyyy'];
 
         $scope.popup1 = {
@@ -266,9 +261,7 @@
                     }
                 }
             }
-
             return '';
         }
-
     }
 })();

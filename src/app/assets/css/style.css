@@ -817,6 +817,7 @@ ul.nav.navbar-nav.box>li>a {
 	ul.nav.navbar-nav > li > a {
 		padding: 10px;
 	}
+
 }
 
 @media (width: 768px) {
@@ -945,7 +946,12 @@ ul.nav.navbar-nav.box>li>a {
 
 @media (min-width: 472px) and (max-width: 600px) {
 	.overlay-slider {
-		top: 190px;
+
+	}
+	.img-check img{
+		top: 71px;
+		width: 40%;
+		position: relative;
 	}
 	h1.carousel-home-title {
 		font-size: 2.9em;
