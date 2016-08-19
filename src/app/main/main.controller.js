@@ -59,7 +59,7 @@
       if(localStorage.getItem("token_facebook") === undefined || localStorage.getItem("token_facebook") == null){
         $auth.authenticate(provider)
             .then(function(response) { 
-              localStorage.setItem("satellizer_token", localStorage.getItem("satellizer_token2") );
+              //localStorage.setItem("satellizer_token", localStorage.getItem("satellizer_token2") );
               localStorage.setItem("token_facebook", response.access_token);
 
               vm.facebookPost(vm.user.referral_code);
