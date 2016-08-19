@@ -31,12 +31,14 @@
 
         $authProvider.facebook({
           clientId: '418086618225988',
-          responseType: 'token'
+          responseType: 'token',
+          tokenPrefix: 'facebook'
         });
 
         $authProvider.twitter({
             url: '/auth/twitter',
-            responseType:'token'
+            responseType:'token',
+            tokenPrefix: 'twitter'
         });
 
 
