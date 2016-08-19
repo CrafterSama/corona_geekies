@@ -44,6 +44,23 @@
             toastr.success('Enlace publicado con exito');
           }, function(error) {
             toastr.error('Enlace no fue publicado');
+            if (error.type == 'OAuthException'){
+              $auth.authenticate(provider)
+              .then(function(response) {
+                localStorage.setItem("token_facebook", response.access_token);
+
+                vm.facebookPost(vm.user.referral_code);
+              })
+              .catch(function(error) {
+                if (error.message) {
+                  toastr.error(error.message);
+                } else if (error.data) {
+                  toastr.error(error.data.message, error.status);
+                } else {
+                  toastr.error(error);
+                }
+              });
+            }
           });
 
     };
