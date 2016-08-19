@@ -11,7 +11,6 @@
     /** @ngInject */
     function RegisterController($scope, $auth, $state, $http, toastr, $location, $filter) {
         var vm = this;
-        vm.idGuerrero = false;
         vm.user = {};
         vm.server = [];
         var token = null;
@@ -114,9 +113,6 @@
             }
         };
 
-        vm.registerGuerrero = function(){
-            vm.idGuerrero = !vm.idGuerrero;
-        };
 
         vm.postGuerrero = function(id) {
             if (id !== undefined) {

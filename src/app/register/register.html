@@ -178,9 +178,9 @@
                             <span class="social-buttons"><a class="col-lg-6 col-md-6 col-sm-3 col-xs-3" href="#"><img src="assets/images/twitter-s-a.svg" alt="" /></a></span>
                             <p class="col-md-12">Si ya eres un Guerreo, Registrate con tu ID Guerrero aqui.</p>
                             <div class="col-md-12">
-                                <img ng-src="assets/images/L-PG.png" alt="" class="img-responsive" role="button" style="width:100%" data-ng-click="register.registerGuerrero()">
+                                <img ng-src="assets/images/L-PG.png" alt="" class="img-responsive" role="button" style="width:100%">
                             </div>
-                            <div class="form-group" ng-class="{ 'has-error' : (userForm.guerrero.$invalid || register.server.guerrero) && register.submitted}" data-ng-if="register.idGuerrero">
+                            <div class="form-group" ng-class="{ 'has-error' : (userForm.guerrero.$invalid || register.server.guerrero) && register.submitted}">
                                 <div class="input-group">
                                     <input type="text" name="guerrero" class="form-control" placeholder="ID Guerrero" data-ng-pattern="/^(\d)+$/" ng-maxlength="6" ng-model="register.user.guerrero">
                                         <span class="input-group-btn">
