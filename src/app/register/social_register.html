@@ -17,7 +17,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="row collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-header navbar-right" ng-class="{minNav:boolChangeClass}">
-                    <li><a href="/home">Inicio</a></li>
+                    <li><a href="#/home">Inicio</a></li>
                     <li><a href="#">Beneficio del Club</a></li>
                     <li><a href="#">El Club Social</a></li>
                     <li class="social-buttons hidden-xs hidden-sm"><a href="#"><img src="assets/images/face-s.svg" alt="" /></a></li>
@@ -136,7 +136,7 @@
                                 </div>
                                 <div class="form-group col-md-6"><label>
                                     <br>
-                                    <input type="checkbox" name="accept" data-ng-model="social_register.user.check" required><a href="/terms" target="_blank" class="terms_conditions"> Acepto los Terminos y Condiciones</a>
+                                    <input type="checkbox" name="accept" data-ng-model="social_register.user.check" required><a href="#/terms" target="_blank" class="terms_conditions"> Acepto los Terminos y Condiciones</a>
                                     <p  ng-show="userForm.accept.$invalid && social_register.submitted" class="message-alert"><b>* Requerido.</b></p>
                                 </label>
                                 </div>
