@@ -56,7 +56,7 @@
       console.log(localStorage.getItem("token_facebook"));
 
       if(localStorage.getItem("token_facebook") === undefined || localStorage.getItem("token_facebook") == null){
-
+        alert("entro")
         $auth.authenticate(provider)
             .then(function(response) { 
               localStorage.setItem("satellizer_token", vm.satellizer_token);
