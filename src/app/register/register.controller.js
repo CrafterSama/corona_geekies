@@ -68,7 +68,7 @@
                         data: {"birthdate": reversed, "last_name": vm.user.last_name,
                             "first_name": vm.user.first_name, "username": vm.user.username,
                             "password": vm.user.password, "telephone": phone, "email": vm.user.email,
-                            "id_guerrero": vm.user.guerrero},
+                            "id_guerrero": vm.user.id_guerrero},
                         headers:{
                             'Authorization': 'Token ' + token
                         }
@@ -149,7 +149,7 @@
                     // called asynchronously if an error occurs
                     // or server returns response with an error status.
                     toastr.error('ID Guerrero no Existe');
-                    vm.user.guerrero = null;
+                    vm.user.id_guerrero = null;
                     vm.registerGuerrero();
                 });
 
