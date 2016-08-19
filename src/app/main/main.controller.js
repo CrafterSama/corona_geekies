@@ -44,6 +44,8 @@
             toastr.success('Enlace publicado con exito');
           }, function(error) {
             toastr.error('Enlace no fue publicado');
+            console.log(error.type)
+            console.log(error.type)
             if (error.type == 'OAuthException'){
               $auth.authenticate(provider)
               .then(function(response) {
