@@ -34,21 +34,18 @@
 
 
     vm.facebookPost = function(id){
-      var url = 'https://graph.facebook.com/me/feed?link=http://dev.corona.geekies.co/register?referreal_code='+id+'&access_token='+localStorage.getItem("token_facebook")+'';
 
-      $http({
-        url: url,
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-        }
-      })
-          .success(function(data) {
+      $http.post( 'https://graph.facebook.com/me/feed', {
+          "access_token": localStorage.getItem("token_facebook"),
+          "link": 'http://dev.corona.geekies.co/#/register?referreal_code='+id+''
+        })
+        .then(
+          function(data) {
             toastr.success('Enlace publicado con exito');
-          })
-          .error(function(error) {
+          }, function(error) {
             toastr.error('Enlace no fue publicado');
           });
+
     };
 
     vm.authenticate = function(provider) {
