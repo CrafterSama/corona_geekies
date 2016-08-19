@@ -14,6 +14,7 @@
         vm.idGuerrero = false;
         vm.user = {};
         vm.server = [];
+        var token = null;
 
         if($location.$$search.referral_code !== undefined){
 
@@ -47,20 +48,53 @@
         vm.submitForm = function(form) {
             console.log(form);
             vm.submitted = true;
-
+            console.log(vm.user);
             // check to make sure the form is completely valid
             if (form.$valid) {
 
-                var date = vm.user.birthdate;
-                var pieces = date.split('-');
-                pieces.reverse();
-                var reversed = pieces.join('-');
+                if(vm.user.id){
 
-                var phone = vm.user.telephone.replace(/[.*+?^${}()|[\]\\-]/g, "");
-                phone = phone.replace(' ', '');
+                    var date = vm.user.birthdate;
+                    var pieces = date.split('-');
+                    pieces.reverse();
+                    var reversed = pieces.join('-');
+
+                    var phone = vm.user.telephone.replace(/[.*+?^${}()|[\]\\-]/g, "");
+                    phone = phone.replace(' ', '');
+
+                    $http({
+                        method: 'PUT',
+                        url: 'http://dev.corona.geekies.co:8000/accounts/' + vm.user.id +'/',
+                        data: {"birthdate": reversed, "last_name": vm.user.last_name,
+                            "first_name": vm.user.first_name, "username": vm.user.username,
+                            "password": vm.user.password, "telephone": phone, "email": vm.user.email,
+                            "id_guerrero": vm.user.guerrero},
+                        headers:{
+                            'Authorization': 'Token ' + token
+                        }
+                    }).then(function successCallback(response) {
+
+                        $state.go('login');
+                        // this callback will be called asynchronously
+                        // when the response is available
+                    }, function errorCallback(response) {
+                        // called asynchronously if an error occurs
+                        // or server returns response with an error status.
+                        vm.server = response.data;
+                    });
+
+                }else{
+
+                    var date = vm.user.birthdate;
+                    var pieces = date.split('-');
+                    pieces.reverse();
+                    var reversed = pieces.join('-');
+
+                    var phone = vm.user.telephone.replace(/[.*+?^${}()|[\]\\-]/g, "");
+                    phone = phone.replace(' ', '');
 
 
-                $auth.signup({
+                    $auth.signup({
                         username:   vm.user.username,
                         password:   vm.user.password,
                         city:       vm.user.city,
@@ -71,17 +105,17 @@
                         email:      vm.user.email,
                         referral_code: referral_code
                     })
-                    .then(function() {
-                        // Si se ha registrado correctamente,
-                        // Podemos redirigirle a otra parte
-                        $state.go('login');
-                    })
-                    .catch(function(response) {
-                        vm.server = response.data;
-                        // Si ha habido errores, llegaremos a esta función
-                    });
+                        .then(function() {
+                            // Si se ha registrado correctamente,
+                            // Podemos redirigirle a otra parte
+                            $state.go('login');
+                        })
+                        .catch(function(response) {
+                            vm.server = response.data;
+                            // Si ha habido errores, llegaremos a esta función
+                        });
+                }
             }
-
         };
 
         vm.registerGuerrero = function(){
@@ -98,6 +132,8 @@
                     data: value
                 }).then(function successCallback(response) {
 
+                    token = response.data.token;
+
                     /* Function para la fecha */
                     var birthdate = response.data.user.birthdate;
                     var pieces = birthdate.split('-');
@@ -113,6 +149,7 @@
                     // called asynchronously if an error occurs
                     // or server returns response with an error status.
                     toastr.error('ID Guerrero no Existe');
+                    vm.user.guerrero = null;
                     vm.registerGuerrero();
                 });
 

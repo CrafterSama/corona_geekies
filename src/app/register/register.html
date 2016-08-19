@@ -32,7 +32,8 @@
 <div class="row promo-image">
     <div class="overlay-promo">
         <div class="container">
-            <h1 class="promo-home-title">Registrate, Juega y Gana</h1>
+            <h3 class="promo-home-title">Registrate, Juega y Gana<br />premios en el</h3>
+            <h1 class="promo-home-title">Club Santos Corona</h1>
             <div class="row action-buttons">
                 <div class="btn-group justified sign-buttons" role="group" aria-label="...">
                     <a type="button" href="#/register" id="show-register" class="btn btn-success">Registro</a>
@@ -115,12 +116,12 @@
 
                             </div>
                             <div class="col-lg-12">
-                                <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.birthday.$invalid || register.server.birhtdate)  && register.submitted  }">
+                                <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.birthdate.$invalid || register.server.birthdate)  && register.submitted  }">
                                     <label for="birthday">Fecha de Nacimiento *</label>
-                                    <input type="text" name="birthday" class="form-control" ng-model="register.user.birthdate" mask='99-99-9999' placeholder="Ej: 31-12-1981" required>
-                                    <p  ng-show="userForm.birthday.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
+                                    <input type="text" name="birthdate" class="form-control" ng-model="register.user.birthdate" mask='99-99-9999' placeholder="Ej: 31-12-1981" required>
+                                    <p  ng-show="userForm.birthdate.$invalid && register.submitted" class="message-alert"><b>* Requerido.</b></p>
                                     <p  class="help-block message-alert"
-                                        data-ng-show="register.server.birhtdate && register.submitted"
+                                        data-ng-show="register.server.birthdate && register.submitted"
                                         ng-repeat="error in register.server.birthdate"><b> {{error}} </b></p>
                                 </div>
                                 <div class="form-group col-md-6" ng-class="{ 'has-error' : (userForm.password.$invalid || register.server.password) && register.submitted }">
