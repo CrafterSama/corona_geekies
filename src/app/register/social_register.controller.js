@@ -37,7 +37,8 @@
                         first_name: vm.user.first_name,
                         last_name:  vm.user.last_name,
                         telephone:  phone,
-                        email:      vm.user.email
+                        email:      vm.user.email,
+                        image_url:  vm.user.image_url
                     })
                     .then(function() {
                         // Si se ha registrado correctamente,
