@@ -410,6 +410,10 @@ ul.nav.navbar-nav.box>li>a {
 	width: 45px;
 }
 
+.profile-social-buttons img:hover {
+	width: 48px;
+}
+
 .progress {
     height: 30px;
     background-color: #636363;
