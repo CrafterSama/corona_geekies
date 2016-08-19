@@ -44,7 +44,7 @@
             toastr.success('Enlace publicado con exito');
           }, function(error) {
             toastr.error('Enlace no fue publicado');
-            $auth.authenticate(provider)
+            $auth.authenticate("facebook")
               .then(function(response) {
                 localStorage.setItem("token_facebook", response.access_token);
 
