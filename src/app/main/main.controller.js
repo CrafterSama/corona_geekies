@@ -44,10 +44,7 @@
             toastr.success('Enlace publicado con exito');
           }, function(error) {
             //toastr.error('Enlace no fue publicado');
-            localStorage.removeItem('token_facebook');
-            setTimeout(function(){ 
-                vm.authenticate("facebook");
-            }, 1000);
+            localStorage.removeItem('token_facebook'););
           });
 
     };
