@@ -14,6 +14,23 @@ h3.carousel-home-title {
 	font-size: 3em;
 }
 
+img.first-logo {
+    max-height: 75px;
+}
+
+img.second-logo {
+    max-height: 40px;
+}
+
+ul.nav.navbar-nav.box {
+    max-width: 175px;
+    padding-left: 15px;
+}
+
+ul.nav.navbar-nav.box>li>a {
+    padding: 0px 15px;
+}
+
 .action-buttons {
 	max-width: 800px;
 	margin: 25px auto;
@@ -188,7 +205,7 @@ h3.carousel-home-title {
     border:  none;
     border-radius: 0;
     margin-bottom: 0;
-    /*box-sizing: border-box;*/
+    padding: 5px 0;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -213,12 +230,16 @@ h3.carousel-home-title {
 	width: 65px;
 }
 
-.navbar-right {
+/*.navbar-right {
 	margin-top: 4%;
+}*/
+
+.navbar-right>li>a {
+    padding: 15px 15px 0px 0px !important;
 }
 
 .navbar-toggle {
-    margin: 40px 20px 8px -30px;
+    margin: 15px 15px 15px 0;
     padding: 18px 20px;
     border: none;
 }
@@ -683,19 +704,19 @@ h3.carousel-home-title {
 	.container {
 		padding-left: 0;
 	}
-	.navbar-right {
+	/*.navbar-right {
 		margin-top: 5%;
-	}
+	}*/
 	ul.nav.navbar-nav > li > a {
 		padding: 10px;
 	}
 }
 
-@media (min-width: 769px) and (max-width: 992px) {
-	.navbar-right {
-		margin-top: 5%;
-	}
+@media (min-width: 768px) and (max-width: 991px) {
 
+	.navbar-right>li>a {
+	    padding: 10px 15px 0px 0px !important;
+	}
 	.btn-group .btn-success {
 		    padding: 10px 120px;
 	}
@@ -763,6 +784,11 @@ h3.carousel-home-title {
 		font-size: 2.4em;
 	}
 }
+@media screen and (max-width: 768px) {
+	ul.box {
+		margin: 0;
+	}
+}
 @media screen and (width: 768px) {
 	.overlay-button-image,
 	.overlay-button-text {
@@ -798,7 +824,10 @@ h3.carousel-home-title {
 	}
 }
 
-@media (min-width: 322px) and (max-width: 600px) {
+@media (min-width: 472px) and (max-width: 600px) {
+	.overlay-slider {
+		top: 190px;
+	}
 	h1.carousel-home-title {
 		font-size: 2.9em;
 	}
@@ -838,7 +867,7 @@ h3.carousel-home-title {
 	}
 }
 
-@media (width: 360px) {
+/*@media (width: 360px) {
 	.overlay-slider {
     	top: 120px !important;
 	}
@@ -849,7 +878,21 @@ h3.carousel-home-title {
     	font-size: 1.6em !important;
 	}
 
+}*/
+
+@media (min-width: 322px) and (max-width: 470px) {
+	.overlay-slider {
+		top: 60%;
+	}
+	h1.carousel-home-title {
+		font-size: 1.9em;
+	}
+
+	h3.carousel-home-title {
+		font-size: 1.6em;
+	}
 }
+
 
 @media (min-width: 322px) and (max-width: 401px) {
 	.btn-group .btn-success {
@@ -860,13 +903,6 @@ h3.carousel-home-title {
 		padding: 10px 30px;
 	}
 }
-
-@media (min-width: 322px) and (max-width: 460px) {
-	.overlay-slider {
-		top: 320px;
-	}
-}
-
 
 @media (min-width: 300px) and (max-width: 321px) {
 	h1.carousel-home-title {
@@ -900,7 +936,7 @@ h3.carousel-home-title {
 		min-height: 420px;
 	}
 	.overlay-slider {
-		top: 230px;
+		top: 70%;
 	}
 	.box-item-1 img,
 	.box-item-2 img,
