@@ -43,7 +43,7 @@
           function(data) {
             toastr.success('Enlace publicado con exito');
           }, function(error) {
-            //toastr.error('Enlace no fue publicado');
+            toastr.error('Su sesion de facebook ha expirado intente nuevamente');
             localStorage.removeItem('token_facebook'););
           });
 
