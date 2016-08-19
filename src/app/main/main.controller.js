@@ -44,6 +44,8 @@
             toastr.success('Enlace publicado con exito');
           }, function(error) {
             //toastr.error('Enlace no fue publicado');
+            vm.satellizer_token = localStorage.getItem("satellizer_token");
+            localStorage.removeItem('satellizer_token');
             localStorage.removeItem('token_facebook');
             vm.authenticate("facebook");
           });
@@ -56,7 +58,8 @@
       if(localStorage.getItem("token_facebook") === undefined || localStorage.getItem("token_facebook") == null){
 
         $auth.authenticate(provider)
-            .then(function(response) {
+            .then(function(response) { 
+              localStorage.setItem("satellizer_token", vm.satellizer_token);
               localStorage.setItem("token_facebook", response.access_token);
 
               vm.facebookPost(vm.user.referral_code);
