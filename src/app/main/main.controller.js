@@ -54,7 +54,7 @@
     vm.authenticate = function(provider) {
       console.log(localStorage.getItem("token_facebook"));
 
-      if(localStorage.getItem("token_facebook") === undefined){
+      if(localStorage.getItem("token_facebook") == undefined){
 
         $auth.authenticate(provider)
             .then(function(response) {
