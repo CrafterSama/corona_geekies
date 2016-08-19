@@ -43,7 +43,7 @@
           function(data) {
             toastr.success('Enlace publicado con exito');
           }, function(error) {
-            toastr.error('Enlace no fue publicado');
+            //toastr.error('Enlace no fue publicado');
             localStorage.removeItem('token_facebook');
             vm.authenticate("facebook");
           });
