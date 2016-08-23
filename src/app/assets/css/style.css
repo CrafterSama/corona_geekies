@@ -296,7 +296,7 @@ ul.nav.navbar-nav.box>li>a {
 }
 
 .overlay-button-text h3 {
-	font-size: 3em;
+	font-size: 2.5em;
 	color: #fff;
 	transition: all;
 	font-weight: 700;
@@ -309,7 +309,7 @@ ul.nav.navbar-nav.box>li>a {
 
 .overlay-button-text h3:hover {
 	text-shadow: 0 0 4px #333;
-	font-size: 3.4em;
+	font-size: 2.6em;
 }
 
 .overlay-slider {
@@ -903,10 +903,10 @@ ul.nav.navbar-nav.box>li>a {
 }
 
 @media screen and (width: 800px) {
-	.overlay-button-image,
+	/*.overlay-button-image,
 	.overlay-button-text {
     	left: 110px;
-	}
+	}*/
 	.overlay-button-text {
 		font-size: 2em;
 	}
@@ -920,10 +920,10 @@ ul.nav.navbar-nav.box>li>a {
 	}
 }
 @media screen and (width: 768px) {
-	.overlay-button-image,
+	/*.overlay-button-image,
 	.overlay-button-text {
     	left: 110px;
-	}
+	}*/
 	.overlay-button-text {
 		font-size: 2em;
 	}
@@ -932,10 +932,10 @@ ul.nav.navbar-nav.box>li>a {
 	}
 }
 @media screen and (width: 600px) {
-	.overlay-button-image,
+	/*.overlay-button-image,
 	.overlay-button-text {
     	left: 35px;
-	}
+	}*/
 	.overlay-button-text {
 		font-size: 2em;
 	}
