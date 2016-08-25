@@ -58,6 +58,7 @@ ul.nav.navbar-nav.box>li>a {
     border-width: 42px 15px 0 0;
     border-style: solid;
     border-color: #008066 transparent transparent transparent;
+	margin-bottom: -12px;
 }
 
 .btn-group .diagonal-warning {
@@ -69,7 +70,16 @@ ul.nav.navbar-nav.box>li>a {
 }
 
 .action-buttons .btn-group {
-    background-color: #fcb724;
+    /*background-color: #fcb724;*/
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#008066+0,008066+49,fcb724+49,fcb724+100 */
+	background: rgb(0,128,102); /* Old browsers */
+	background: -moz-linear-gradient(left,  rgba(0,128,102,1) 0%, rgba(0,128,102,1) 49%, rgba(252,183,36,1) 49%, rgba(252,183,36,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(0,128,102,1) 0%,rgba(0,128,102,1) 49%,rgba(252,183,36,1) 49%,rgba(252,183,36,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(0,128,102,1) 0%,rgba(0,128,102,1) 49%,rgba(252,183,36,1) 49%,rgba(252,183,36,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008066', endColorstr='#fcb724',GradientType=1 ); /* IE6-9 */
+
+
+
     height: 42px;
 }
 
@@ -774,19 +784,22 @@ ul.nav.navbar-nav.box>li>a {
 }
 
 @media (min-width: 1280px) {
-	.btn-group .btn-success {
-		padding: 10px 145px;
-	}
-
-	.btn-group .btn-warning {
-		padding: 10px 145px;
-	}
 	.overlay {
 		padding-top: 50px;
 	}
 	.content-inner-scores,
 	.content-inner {
 		max-width: 1024px;
+	}
+}
+
+@media (min-width: 1025px) {
+	.btn-group .btn-success {
+		padding: 10px 145px;
+	}
+
+	.btn-group .btn-warning {
+		padding: 10px 145px;
 	}
 }
 
@@ -848,11 +861,11 @@ ul.nav.navbar-nav.box>li>a {
 	    padding: 10px 15px 0px 0px !important;
 	}
 	.btn-group .btn-success {
-		    padding: 10px 120px;
+		    padding: 10px 18%;
 	}
 
 	.btn-group .btn-warning {
-		    padding: 10px 120px;
+    		padding: 10px 18%;
 	}
 }
 
@@ -979,11 +992,11 @@ ul.nav.navbar-nav.box>li>a {
 
 @media (min-width: 509px) and (max-width: 589px) {
 	.btn-group .btn-success {
-		padding: 10px 75px;
+		padding: 10px 65px;
 	}
 
 	.btn-group .btn-warning {
-		padding: 10px 75px;
+		padding: 10px 65px;
 	}
 }
 
