@@ -843,6 +843,15 @@ ul.nav.navbar-nav.box>li>a {
 
 }
 
+@media (max-width:768px) {
+	.navbar-right {
+    	padding: 0;
+	}
+	.navbar-nav {
+	    margin: 0;
+	}
+}
+
 @media (width: 768px) {
 	.container {
 		padding-left: 0;

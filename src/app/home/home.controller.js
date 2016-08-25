@@ -7,7 +7,7 @@
     angular
         .module('appCorona')
         .controller('HomeController', HomeController, function ($scope){
-            $scope.isCollapsed = false;
+            $scope.isCollapsed = true;
         });
 
     /** @ngInject */
